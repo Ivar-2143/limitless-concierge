@@ -1,0 +1,12 @@
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\bin\Debug\Limitless.exe.config
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\bin\Debug\Limitless.exe
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\bin\Debug\Limitless.pdb
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\obj\Debug\Limitless.csproj.AssemblyReference.cache
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\obj\Debug\Limitless.csproj.SuggestedBindingRedirects.cache
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\obj\Debug\Limitless.frmFrontPage.resources
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\obj\Debug\Limitless.Properties.Resources.resources
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\obj\Debug\Limitless.csproj.GenerateResource.cache
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\obj\Debug\Limitless.csproj.CoreCompileInputs.cache
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\obj\Debug\Limitless.exe
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\obj\Debug\Limitless.pdb
+C:\Users\Geloloidz\source\repos\Limitless\Limitless\obj\Debug\Limitless.SingleViewForm.resources
