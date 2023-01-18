@@ -31,5 +31,19 @@ namespace Limitless
             _prevForm.Visible = true;
         }
 
+        private void frmSingleViewForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
