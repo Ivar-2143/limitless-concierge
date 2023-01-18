@@ -28,20 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFrontPage));
             this.lblLogo = new System.Windows.Forms.Label();
             this.pnlWhole = new System.Windows.Forms.Panel();
+            this.btnAddItem = new System.Windows.Forms.Button();
             this.flPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lblRoomType = new System.Windows.Forms.Label();
             this.btnBookingView = new System.Windows.Forms.Button();
-            this.btnAddItem = new System.Windows.Forms.Button();
+            this.pbFormLogo = new System.Windows.Forms.PictureBox();
             this.pnlWhole.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFormLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
             this.lblLogo.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(66, 9);
+            this.lblLogo.Location = new System.Drawing.Point(84, 12);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(172, 38);
             this.lblLogo.TabIndex = 0;
@@ -58,6 +61,18 @@
             this.pnlWhole.Name = "pnlWhole";
             this.pnlWhole.Size = new System.Drawing.Size(736, 563);
             this.pnlWhole.TabIndex = 1;
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAddItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItem.ForeColor = System.Drawing.Color.White;
+            this.btnAddItem.Location = new System.Drawing.Point(384, 3);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(167, 45);
+            this.btnAddItem.TabIndex = 5;
+            this.btnAddItem.Text = "Add item";
+            this.btnAddItem.UseVisualStyleBackColor = false;
             // 
             // flPanel
             // 
@@ -92,17 +107,16 @@
             this.btnBookingView.Text = "Booking View";
             this.btnBookingView.UseVisualStyleBackColor = false;
             // 
-            // btnAddItem
+            // pbFormLogo
             // 
-            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnAddItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.Location = new System.Drawing.Point(384, 3);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(167, 45);
-            this.btnAddItem.TabIndex = 5;
-            this.btnAddItem.Text = "Add item";
-            this.btnAddItem.UseVisualStyleBackColor = false;
+            this.pbFormLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbFormLogo.Image")));
+            this.pbFormLogo.Location = new System.Drawing.Point(12, 3);
+            this.pbFormLogo.Name = "pbFormLogo";
+            this.pbFormLogo.Size = new System.Drawing.Size(79, 45);
+            this.pbFormLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFormLogo.TabIndex = 2;
+            this.pbFormLogo.TabStop = false;
+            this.pbFormLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmFrontPage
             // 
@@ -110,12 +124,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(760, 619);
+            this.Controls.Add(this.pbFormLogo);
             this.Controls.Add(this.pnlWhole);
             this.Controls.Add(this.lblLogo);
             this.Name = "frmFrontPage";
             this.Text = "Front Page";
             this.pnlWhole.ResumeLayout(false);
             this.pnlWhole.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFormLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,6 +145,7 @@
         private System.Windows.Forms.Label lblRoomType;
         private System.Windows.Forms.FlowLayoutPanel flPanel;
         private System.Windows.Forms.Button btnAddItem;
+        private System.Windows.Forms.PictureBox pbFormLogo;
     }
 }
 

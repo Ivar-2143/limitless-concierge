@@ -19,6 +19,11 @@ namespace Limitless
         List<Room> hotelRooms;
         string workingDirectory, path;
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public frmFrontPage()
         {
             imgsPath = Path.GetFullPath("Images");
