@@ -71,6 +71,7 @@
             // btnBookingView
             // 
             this.btnBookingView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.btnBookingView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookingView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookingView.ForeColor = System.Drawing.Color.White;
             this.btnBookingView.Location = new System.Drawing.Point(540, 3);

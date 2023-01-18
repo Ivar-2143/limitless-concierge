@@ -174,7 +174,7 @@
             this.lblRoomID.AutoSize = true;
             this.lblRoomID.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRoomID.Location = new System.Drawing.Point(351, 52);
+            this.lblRoomID.Location = new System.Drawing.Point(351, 63);
             this.lblRoomID.Name = "lblRoomID";
             this.lblRoomID.Size = new System.Drawing.Size(274, 24);
             this.lblRoomID.TabIndex = 16;
