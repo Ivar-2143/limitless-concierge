@@ -14,24 +14,24 @@ namespace Limitless
 {
     public partial class frmFrontPage : Form
     {
-        string dbPath;
-        string imgsPath;
-        string connection;
+        string dbPath, imgsPath, connection;
         SqlConnection db;
         List<Room> hotelRooms;
+        string workingDirectory, path;
 
         public frmFrontPage()
         {
             imgsPath = Path.GetFullPath("Images");
             dbPath = Path.GetFullPath("dbLimitless.mdf"); 
-            
+            workingDirectory = Environment.CurrentDirectory;
+            path = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
 
             //Console.WriteLine($"{projectDirectory}\\Limitless\\dbLimitless.mdf");
             //C:\Users\Adi\Documents\Visual Studio 2022\Projects\limitless-concierge\Limitless\dbLimitless.mdf
             //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\Adi\Documents\Visual Studio 2022\Projects\limitless-concierge\Limitless\dbLimitless.mdf";Integrated Security=True
-            //connection = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={projectDirectory}\\Limitless\\dbLimitless.mdf;Integrated Security=True";
-            
-            connection = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={dbPath};Integrated Security=True";
+            //connection = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={dbPath};Integrated Security=True";
+
+            connection = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={path}\\Limitless\\dbLimitless.mdf;Integrated Security=True";
             db = new SqlConnection(connection);
             hotelRooms= new List<Room>();
 
@@ -47,8 +47,7 @@ namespace Limitless
 
         private void loadData()
         {
-            string workingDirectory = Environment.CurrentDirectory;
-            string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+           
             
             db.Open();
             SqlCommand cmd = db.CreateCommand();
