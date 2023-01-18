@@ -97,7 +97,7 @@
             this.lblDaysOfStay.AutoSize = true;
             this.lblDaysOfStay.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDaysOfStay.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDaysOfStay.Location = new System.Drawing.Point(664, 98);
+            this.lblDaysOfStay.Location = new System.Drawing.Point(621, 96);
             this.lblDaysOfStay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDaysOfStay.Name = "lblDaysOfStay";
             this.lblDaysOfStay.Size = new System.Drawing.Size(166, 24);
@@ -127,10 +127,10 @@
             // txtDaysOfStay
             // 
             this.txtDaysOfStay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDaysOfStay.Location = new System.Drawing.Point(838, 98);
+            this.txtDaysOfStay.Location = new System.Drawing.Point(783, 96);
             this.txtDaysOfStay.Margin = new System.Windows.Forms.Padding(4);
             this.txtDaysOfStay.Name = "txtDaysOfStay";
-            this.txtDaysOfStay.Size = new System.Drawing.Size(169, 26);
+            this.txtDaysOfStay.Size = new System.Drawing.Size(96, 26);
             this.txtDaysOfStay.TabIndex = 9;
             // 
             // txtGuestName
@@ -171,7 +171,7 @@
             this.lblRoomPrice.AutoSize = true;
             this.lblRoomPrice.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRoomPrice.Location = new System.Drawing.Point(664, 76);
+            this.lblRoomPrice.Location = new System.Drawing.Point(621, 74);
             this.lblRoomPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomPrice.Name = "lblRoomPrice";
             this.lblRoomPrice.Size = new System.Drawing.Size(240, 22);
@@ -222,7 +222,7 @@
             this.lblBedCapacity.AutoSize = true;
             this.lblBedCapacity.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBedCapacity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBedCapacity.Location = new System.Drawing.Point(664, 141);
+            this.lblBedCapacity.Location = new System.Drawing.Point(621, 141);
             this.lblBedCapacity.Name = "lblBedCapacity";
             this.lblBedCapacity.Size = new System.Drawing.Size(178, 24);
             this.lblBedCapacity.TabIndex = 23;
@@ -246,7 +246,7 @@
             this.btnSubmitSingle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitSingle.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitSingle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSubmitSingle.Location = new System.Drawing.Point(771, 442);
+            this.btnSubmitSingle.Location = new System.Drawing.Point(771, 457);
             this.btnSubmitSingle.Name = "btnSubmitSingle";
             this.btnSubmitSingle.Size = new System.Drawing.Size(108, 41);
             this.btnSubmitSingle.TabIndex = 27;
@@ -356,7 +356,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(1204, 625);
+            this.ClientSize = new System.Drawing.Size(902, 521);
             this.Controls.Add(this.dgvAmenities);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.label2);
