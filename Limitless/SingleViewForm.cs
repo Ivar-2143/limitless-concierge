@@ -7,12 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Limitless.Classes;
+using Limitless.Components;
 
 namespace Limitless
 {
     public partial class frmSingleViewForm : Form
     {
-       private frmFrontPage _prevForm;
+        private frmFrontPage _prevForm;
+        private frmAmenities _amenitiesForm;
+        private List<Amenity> _selectedAmenities;
+
+
         public frmSingleViewForm(Room room, frmFrontPage form)
         {
             _prevForm = form;
@@ -32,10 +38,6 @@ namespace Limitless
             _prevForm.Visible = true;
         }
 
-        private void frmSingleViewForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblTotalPrice_Click(object sender, EventArgs e)
         {
@@ -44,6 +46,13 @@ namespace Limitless
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnEditAmenities_Click(object sender, EventArgs e)
+        {
+            _amenitiesForm  = new frmAmenities();
+            _amenitiesForm.ShowDialog();
 
         }
     }

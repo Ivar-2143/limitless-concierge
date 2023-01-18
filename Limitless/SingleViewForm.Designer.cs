@@ -293,6 +293,7 @@
             this.btnEditAmenities.TabIndex = 30;
             this.btnEditAmenities.Text = "Edit";
             this.btnEditAmenities.UseVisualStyleBackColor = false;
+            this.btnEditAmenities.Click += new System.EventHandler(this.btnEditAmenities_Click);
             // 
             // label1
             // 
@@ -384,7 +385,6 @@
             this.Controls.Add(this.ptbPictureSingle);
             this.Name = "frmSingleViewForm";
             this.Text = "SingleViewForm";
-            this.Load += new System.EventHandler(this.frmSingleViewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbPictureSingle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmenities)).EndInit();
             this.ResumeLayout(false);
