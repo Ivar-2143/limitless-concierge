@@ -85,7 +85,8 @@
             this.lblGuestNo.AutoSize = true;
             this.lblGuestNo.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGuestNo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblGuestNo.Location = new System.Drawing.Point(378, 141);
+            this.lblGuestNo.Location = new System.Drawing.Point(359, 141);
+            this.lblGuestNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGuestNo.Name = "lblGuestNo";
             this.lblGuestNo.Size = new System.Drawing.Size(118, 24);
             this.lblGuestNo.TabIndex = 4;
@@ -96,7 +97,8 @@
             this.lblDaysOfStay.AutoSize = true;
             this.lblDaysOfStay.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDaysOfStay.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDaysOfStay.Location = new System.Drawing.Point(547, 100);
+            this.lblDaysOfStay.Location = new System.Drawing.Point(664, 98);
+            this.lblDaysOfStay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDaysOfStay.Name = "lblDaysOfStay";
             this.lblDaysOfStay.Size = new System.Drawing.Size(166, 24);
             this.lblDaysOfStay.TabIndex = 5;
@@ -116,15 +118,17 @@
             // txtGuestNo
             // 
             this.txtGuestNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGuestNo.Location = new System.Drawing.Point(491, 141);
+            this.txtGuestNo.Location = new System.Drawing.Point(509, 141);
+            this.txtGuestNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuestNo.Name = "txtGuestNo";
-            this.txtGuestNo.Size = new System.Drawing.Size(72, 26);
+            this.txtGuestNo.Size = new System.Drawing.Size(95, 26);
             this.txtGuestNo.TabIndex = 8;
             // 
             // txtDaysOfStay
             // 
             this.txtDaysOfStay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDaysOfStay.Location = new System.Drawing.Point(710, 99);
+            this.txtDaysOfStay.Location = new System.Drawing.Point(838, 98);
+            this.txtDaysOfStay.Margin = new System.Windows.Forms.Padding(4);
             this.txtDaysOfStay.Name = "txtDaysOfStay";
             this.txtDaysOfStay.Size = new System.Drawing.Size(169, 26);
             this.txtDaysOfStay.TabIndex = 9;
@@ -165,22 +169,24 @@
             // lblRoomPrice
             // 
             this.lblRoomPrice.AutoSize = true;
-            this.lblRoomPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomPrice.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRoomPrice.Location = new System.Drawing.Point(610, 60);
+            this.lblRoomPrice.Location = new System.Drawing.Point(664, 76);
+            this.lblRoomPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomPrice.Name = "lblRoomPrice";
-            this.lblRoomPrice.Size = new System.Drawing.Size(286, 24);
+            this.lblRoomPrice.Size = new System.Drawing.Size(240, 22);
             this.lblRoomPrice.TabIndex = 14;
             this.lblRoomPrice.Text = "Price: 1,500/ per night";
             // 
             // lblRoomID
             // 
             this.lblRoomID.AutoSize = true;
-            this.lblRoomID.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomID.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRoomID.Location = new System.Drawing.Point(358, 60);
+            this.lblRoomID.Location = new System.Drawing.Point(359, 76);
+            this.lblRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomID.Name = "lblRoomID";
-            this.lblRoomID.Size = new System.Drawing.Size(94, 24);
+            this.lblRoomID.Size = new System.Drawing.Size(80, 22);
             this.lblRoomID.TabIndex = 16;
             this.lblRoomID.Text = "Room ID";
             // 
@@ -216,7 +222,7 @@
             this.lblBedCapacity.AutoSize = true;
             this.lblBedCapacity.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBedCapacity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBedCapacity.Location = new System.Drawing.Point(592, 141);
+            this.lblBedCapacity.Location = new System.Drawing.Point(664, 141);
             this.lblBedCapacity.Name = "lblBedCapacity";
             this.lblBedCapacity.Size = new System.Drawing.Size(178, 24);
             this.lblBedCapacity.TabIndex = 23;
@@ -238,7 +244,7 @@
             this.btnSubmitSingle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnSubmitSingle.FlatAppearance.BorderSize = 0;
             this.btnSubmitSingle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmitSingle.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmitSingle.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitSingle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSubmitSingle.Location = new System.Drawing.Point(771, 442);
             this.btnSubmitSingle.Name = "btnSubmitSingle";
@@ -263,7 +269,7 @@
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(15, 9);
             this.btnBack.Name = "btnBack";
@@ -278,10 +284,10 @@
             this.btnEditAmenities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnEditAmenities.FlatAppearance.BorderSize = 0;
             this.btnEditAmenities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditAmenities.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditAmenities.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditAmenities.ForeColor = System.Drawing.Color.White;
             this.btnEditAmenities.Location = new System.Drawing.Point(668, 326);
-            this.btnEditAmenities.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditAmenities.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditAmenities.Name = "btnEditAmenities";
             this.btnEditAmenities.Size = new System.Drawing.Size(98, 37);
             this.btnEditAmenities.TabIndex = 30;
@@ -327,7 +333,7 @@
             // 
             this.dgvAmenities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAmenities.Location = new System.Drawing.Point(350, 368);
-            this.dgvAmenities.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAmenities.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAmenities.Name = "dgvAmenities";
             this.dgvAmenities.RowHeadersWidth = 51;
             this.dgvAmenities.RowTemplate.Height = 24;
@@ -350,8 +356,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(903, 508);
-            this.Controls.Add(this.lblBedCap);
+            this.ClientSize = new System.Drawing.Size(1204, 625);
             this.Controls.Add(this.dgvAmenities);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.label2);
