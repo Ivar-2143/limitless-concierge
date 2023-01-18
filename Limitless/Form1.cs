@@ -5,6 +5,7 @@ using System.IO;
 using Limitless.Classes;
 using Limitless.Components;
 using System.Windows.Forms;
+using Limitless.Views;
 
 namespace Limitless
 {
@@ -15,11 +16,7 @@ namespace Limitless
         List<Room> hotelRooms;
         string workingDirectory, path;
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         public frmFrontPage()
         {
             imgsPath = Path.GetFullPath("Images");
@@ -32,7 +29,7 @@ namespace Limitless
             //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\Adi\Documents\Visual Studio 2022\Projects\limitless-concierge\Limitless\dbLimitless.mdf";Integrated Security=True
             //connection = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={dbPath};Integrated Security=True";
 
-            connection = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={path}\\Limitless\\dbLimitless.mdf;Integrated Security=True";
+            connection = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={path}\\Limitless\\dbLimitless.mdf;Integrated Security=False";
             db = new SqlConnection(connection);
             hotelRooms= new List<Room>();
 
@@ -41,14 +38,26 @@ namespace Limitless
 
             foreach(Room room in hotelRooms)
             {
-                flPanel.Controls.Add(new RoomPreview(room, this));
+                flPanel.Controls.Add(new RoomPreview(room, this,db));
             }
 
         }
+        public void ReloadLayout() {
+
+            loadData();
+
+            flPanel.Controls.Clear();
+            flPanel.Refresh();
+            foreach (Room room in hotelRooms)
+            {
+                flPanel.Controls.Add(new RoomPreview(room, this, db));
+            }
+            flPanel.Refresh();
+        } 
 
         private void loadData()
         {
-           
+            hotelRooms.Clear();
             
             db.Open();
             SqlCommand cmd = db.CreateCommand();
@@ -84,5 +93,21 @@ namespace Limitless
 
             db.Close();
         }
+
+        private int Generate_RoomNumber()
+        {
+            int roomNum = 0;
+            foreach (Room room in hotelRooms)
+            {
+                roomNum = room.RoomNum;
+            }
+            return roomNum+=1;
+        }
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            ModifyRoomForm roomForm = new ModifyRoomForm(this, db, Generate_RoomNumber());
+            roomForm.ShowDialog();
+        }
+
     }
 }
