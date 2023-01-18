@@ -18,8 +18,9 @@ namespace Limitless
             _prevForm = form;
             InitializeComponent();
 
+            lblBedCap.Text = Convert.ToString(room.BedCapacity);
             lblRoomName.Text = room.RoomName;
-            lblRoomPrice.Text = $"{Convert.ToString(room.Price)}/per night";
+            lblRoomPrice.Text = $"Price: {Convert.ToString(room.Price)}/per night";
             lblRoomID.Text = $"{room.RoomName}-{room.RoomNum}";
             ptbPictureSingle.Image = Image.FromFile(room.Image);
             lblRoomNum.Text = Convert.ToString(room.RoomNum);

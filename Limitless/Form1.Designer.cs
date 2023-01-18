@@ -30,9 +30,10 @@
         {
             this.lblLogo = new System.Windows.Forms.Label();
             this.pnlWhole = new System.Windows.Forms.Panel();
+            this.flPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lblRoomType = new System.Windows.Forms.Label();
             this.btnBookingView = new System.Windows.Forms.Button();
-            this.flPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddItem = new System.Windows.Forms.Button();
             this.pnlWhole.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             // pnlWhole
             // 
             this.pnlWhole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.pnlWhole.Controls.Add(this.btnAddItem);
             this.pnlWhole.Controls.Add(this.flPanel);
             this.pnlWhole.Controls.Add(this.lblRoomType);
             this.pnlWhole.Controls.Add(this.btnBookingView);
@@ -56,29 +58,6 @@
             this.pnlWhole.Name = "pnlWhole";
             this.pnlWhole.Size = new System.Drawing.Size(736, 563);
             this.pnlWhole.TabIndex = 1;
-            // 
-            // lblRoomType
-            // 
-            this.lblRoomType.AutoSize = true;
-            this.lblRoomType.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRoomType.Location = new System.Drawing.Point(37, 11);
-            this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(179, 37);
-            this.lblRoomType.TabIndex = 3;
-            this.lblRoomType.Text = "Room Type";
-            // 
-            // btnBookingView
-            // 
-            this.btnBookingView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
-            this.btnBookingView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookingView.ForeColor = System.Drawing.Color.White;
-            this.btnBookingView.Location = new System.Drawing.Point(540, 3);
-            this.btnBookingView.Name = "btnBookingView";
-            this.btnBookingView.Size = new System.Drawing.Size(167, 45);
-            this.btnBookingView.TabIndex = 2;
-            this.btnBookingView.Text = "Booking View";
-            this.btnBookingView.UseVisualStyleBackColor = false;
             // 
             // flPanel
             // 
@@ -88,6 +67,42 @@
             this.flPanel.Name = "flPanel";
             this.flPanel.Size = new System.Drawing.Size(707, 492);
             this.flPanel.TabIndex = 4;
+            // 
+            // lblRoomType
+            // 
+            this.lblRoomType.AutoSize = true;
+            this.lblRoomType.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRoomType.Location = new System.Drawing.Point(54, 11);
+            this.lblRoomType.Name = "lblRoomType";
+            this.lblRoomType.Size = new System.Drawing.Size(107, 37);
+            this.lblRoomType.TabIndex = 3;
+            this.lblRoomType.Text = "Rooms";
+            // 
+            // btnBookingView
+            // 
+            this.btnBookingView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.btnBookingView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookingView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookingView.ForeColor = System.Drawing.Color.White;
+            this.btnBookingView.Location = new System.Drawing.Point(557, 3);
+            this.btnBookingView.Name = "btnBookingView";
+            this.btnBookingView.Size = new System.Drawing.Size(167, 45);
+            this.btnBookingView.TabIndex = 2;
+            this.btnBookingView.Text = "Booking View";
+            this.btnBookingView.UseVisualStyleBackColor = false;
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAddItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItem.ForeColor = System.Drawing.Color.White;
+            this.btnAddItem.Location = new System.Drawing.Point(384, 3);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(167, 45);
+            this.btnAddItem.TabIndex = 5;
+            this.btnAddItem.Text = "Add item";
+            this.btnAddItem.UseVisualStyleBackColor = false;
             // 
             // frmFrontPage
             // 
@@ -113,6 +128,7 @@
         private System.Windows.Forms.Button btnBookingView;
         private System.Windows.Forms.Label lblRoomType;
         private System.Windows.Forms.FlowLayoutPanel flPanel;
+        private System.Windows.Forms.Button btnAddItem;
     }
 }
 
