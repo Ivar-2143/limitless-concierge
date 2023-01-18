@@ -21,6 +21,8 @@ namespace Limitless
             lblRoomName.Text = room.RoomName;
             lblRoomPrice.Text = $"{Convert.ToString(room.Price)}/per night";
             lblRoomID.Text = $"{room.RoomName}-{room.RoomNum}";
+            ptbPictureSingle.Image = Image.FromFile(room.Image);
+            lblRoomNum.Text = Convert.ToString(room.RoomNum);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -28,5 +30,6 @@ namespace Limitless
             Close();
             _prevForm.Visible = true;
         }
+
     }
 }

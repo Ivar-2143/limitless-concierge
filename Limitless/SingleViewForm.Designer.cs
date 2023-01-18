@@ -50,7 +50,7 @@
             this.pnlAmenities = new System.Windows.Forms.Panel();
             this.lblAmenities = new System.Windows.Forms.Label();
             this.btnSubmitSingle = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRoomNum = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPictureSingle)).BeginInit();
             this.SuspendLayout();
@@ -268,16 +268,16 @@
             this.btnSubmitSingle.Text = "Submit";
             this.btnSubmitSingle.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lblRoomNum
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(464, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "label1";
+            this.lblRoomNum.AutoSize = true;
+            this.lblRoomNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomNum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRoomNum.Location = new System.Drawing.Point(464, 127);
+            this.lblRoomNum.Name = "lblRoomNum";
+            this.lblRoomNum.Size = new System.Drawing.Size(70, 25);
+            this.lblRoomNum.TabIndex = 28;
+            this.lblRoomNum.Text = "label1";
             // 
             // btnBack
             // 
@@ -300,7 +300,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(903, 508);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblRoomNum);
             this.Controls.Add(this.btnSubmitSingle);
             this.Controls.Add(this.lblAmenities);
             this.Controls.Add(this.pnlAmenities);
@@ -353,7 +353,7 @@
         private System.Windows.Forms.Panel pnlAmenities;
         private System.Windows.Forms.Label lblAmenities;
         private System.Windows.Forms.Button btnSubmitSingle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRoomNum;
         private System.Windows.Forms.Button btnBack;
     }
 }
