@@ -30,68 +30,68 @@
         {
             this.lblAmenities = new System.Windows.Forms.Label();
             this.pnlConsumable = new System.Windows.Forms.Panel();
-            this.pnlCoffeeKit = new System.Windows.Forms.Panel();
-            this.chkCoffeeKit = new System.Windows.Forms.CheckBox();
-            this.pnlAlcoholBeverages = new System.Windows.Forms.Panel();
-            this.chkAlcoholBeverages = new System.Windows.Forms.CheckBox();
-            this.pnlBreakfastBuffet = new System.Windows.Forms.Panel();
-            this.chkBreakfastBuffet = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblConsumablePrice = new System.Windows.Forms.Label();
             this.pnlDinnerBuffet = new System.Windows.Forms.Panel();
+            this.lblDinnerBuffetPrice = new System.Windows.Forms.Label();
             this.chkDinnerBuffet = new System.Windows.Forms.CheckBox();
             this.pnlLunchBuffet = new System.Windows.Forms.Panel();
+            this.lblLunchBuffetPrice = new System.Windows.Forms.Label();
             this.chkLunchBuffet = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlBreakfastBuffet = new System.Windows.Forms.Panel();
+            this.lblBreakfastBuffetPrice = new System.Windows.Forms.Label();
+            this.chkBreakfastBuffet = new System.Windows.Forms.CheckBox();
+            this.pnlAlcoholBeverages = new System.Windows.Forms.Panel();
+            this.lblAlcoholBeveragesPrice = new System.Windows.Forms.Label();
+            this.chkAlcoholBeverages = new System.Windows.Forms.CheckBox();
+            this.pnlCoffeeKit = new System.Windows.Forms.Panel();
+            this.lblCoffeeKitPrice = new System.Windows.Forms.Label();
+            this.chkCoffeeKit = new System.Windows.Forms.CheckBox();
             this.pnlHygiene = new System.Windows.Forms.Panel();
+            this.lblHygienePrice = new System.Windows.Forms.Label();
             this.pnlOintment = new System.Windows.Forms.Panel();
+            this.lblOintmentPrice = new System.Windows.Forms.Label();
             this.chkOintment = new System.Windows.Forms.CheckBox();
             this.pnlBathrobesAndSlippers = new System.Windows.Forms.Panel();
+            this.lblBathrobesAndSlippersPrice = new System.Windows.Forms.Label();
             this.chkBathrobesAndSlippers = new System.Windows.Forms.CheckBox();
-            this.lblHygiene = new System.Windows.Forms.Label();
+            this.lblEssential = new System.Windows.Forms.Label();
             this.pnlTissueBox = new System.Windows.Forms.Panel();
+            this.lblTissueBoxPrice = new System.Windows.Forms.Label();
             this.chkTissueBox = new System.Windows.Forms.CheckBox();
             this.pnlToiletries = new System.Windows.Forms.Panel();
+            this.lblToiletriesPrice = new System.Windows.Forms.Label();
             this.chkToiletries = new System.Windows.Forms.CheckBox();
             this.pnlLotion = new System.Windows.Forms.Panel();
+            this.lblLotionPrice = new System.Windows.Forms.Label();
             this.chkLotion = new System.Windows.Forms.CheckBox();
             this.pnlOthers = new System.Windows.Forms.Panel();
+            this.lblOthersPrice = new System.Windows.Forms.Label();
             this.pnlCouch = new System.Windows.Forms.Panel();
+            this.lblCouchPrice = new System.Windows.Forms.Label();
             this.chkCouch = new System.Windows.Forms.CheckBox();
             this.pnlTable = new System.Windows.Forms.Panel();
+            this.lblTablePrice = new System.Windows.Forms.Label();
             this.chkTable = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlChair = new System.Windows.Forms.Panel();
+            this.lblChairPrice = new System.Windows.Forms.Label();
             this.chkChair = new System.Windows.Forms.CheckBox();
             this.pnlSpeaker = new System.Windows.Forms.Panel();
+            this.lblSpeakerPrice = new System.Windows.Forms.Label();
             this.chkSpeaker = new System.Windows.Forms.CheckBox();
             this.pnlArcadeGames = new System.Windows.Forms.Panel();
+            this.lblArcadeGamesPrice = new System.Windows.Forms.Label();
             this.chkArcadeGames = new System.Windows.Forms.CheckBox();
-            this.lblConsumablePrice = new System.Windows.Forms.Label();
-            this.lblOthersPrice = new System.Windows.Forms.Label();
-            this.lblHygienePrice = new System.Windows.Forms.Label();
             this.btnSubmitAmenties = new System.Windows.Forms.Button();
             this.pnlTotalPrice = new System.Windows.Forms.Panel();
             this.lblTotalPrice = new System.Windows.Forms.Label();
-            this.lblCoffeeKitPrice = new System.Windows.Forms.Label();
-            this.lblAlcoholBeveragesPrice = new System.Windows.Forms.Label();
-            this.lblBreakfastBuffetPrice = new System.Windows.Forms.Label();
-            this.lblLotionPrice = new System.Windows.Forms.Label();
-            this.lblToiletriesPrice = new System.Windows.Forms.Label();
-            this.lblTissueBoxPrice = new System.Windows.Forms.Label();
-            this.lblBathrobesAndSlippersPrice = new System.Windows.Forms.Label();
-            this.lblArcadeGamesPrice = new System.Windows.Forms.Label();
-            this.lblSpeakerPrice = new System.Windows.Forms.Label();
-            this.lblChairPrice = new System.Windows.Forms.Label();
-            this.lblTablePrice = new System.Windows.Forms.Label();
-            this.lblCouchPrice = new System.Windows.Forms.Label();
-            this.lblLunchBuffetPrice = new System.Windows.Forms.Label();
-            this.lblDinnerBuffetPrice = new System.Windows.Forms.Label();
-            this.lblOintmentPrice = new System.Windows.Forms.Label();
             this.pnlConsumable.SuspendLayout();
-            this.pnlCoffeeKit.SuspendLayout();
-            this.pnlAlcoholBeverages.SuspendLayout();
-            this.pnlBreakfastBuffet.SuspendLayout();
             this.pnlDinnerBuffet.SuspendLayout();
             this.pnlLunchBuffet.SuspendLayout();
+            this.pnlBreakfastBuffet.SuspendLayout();
+            this.pnlAlcoholBeverages.SuspendLayout();
+            this.pnlCoffeeKit.SuspendLayout();
             this.pnlHygiene.SuspendLayout();
             this.pnlOintment.SuspendLayout();
             this.pnlBathrobesAndSlippers.SuspendLayout();
@@ -133,83 +133,17 @@
             this.pnlConsumable.Size = new System.Drawing.Size(402, 288);
             this.pnlConsumable.TabIndex = 28;
             // 
-            // pnlCoffeeKit
+            // lblConsumablePrice
             // 
-            this.pnlCoffeeKit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
-            this.pnlCoffeeKit.Controls.Add(this.lblCoffeeKitPrice);
-            this.pnlCoffeeKit.Controls.Add(this.chkCoffeeKit);
-            this.pnlCoffeeKit.Location = new System.Drawing.Point(5, 51);
-            this.pnlCoffeeKit.Name = "pnlCoffeeKit";
-            this.pnlCoffeeKit.Size = new System.Drawing.Size(393, 42);
-            this.pnlCoffeeKit.TabIndex = 0;
-            // 
-            // chkCoffeeKit
-            // 
-            this.chkCoffeeKit.AutoSize = true;
-            this.chkCoffeeKit.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkCoffeeKit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.chkCoffeeKit.Location = new System.Drawing.Point(3, 7);
-            this.chkCoffeeKit.Name = "chkCoffeeKit";
-            this.chkCoffeeKit.Size = new System.Drawing.Size(149, 28);
-            this.chkCoffeeKit.TabIndex = 0;
-            this.chkCoffeeKit.Text = "Coffee Kit";
-            this.chkCoffeeKit.UseVisualStyleBackColor = true;
-            // 
-            // pnlAlcoholBeverages
-            // 
-            this.pnlAlcoholBeverages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
-            this.pnlAlcoholBeverages.Controls.Add(this.lblAlcoholBeveragesPrice);
-            this.pnlAlcoholBeverages.Controls.Add(this.chkAlcoholBeverages);
-            this.pnlAlcoholBeverages.Location = new System.Drawing.Point(5, 99);
-            this.pnlAlcoholBeverages.Name = "pnlAlcoholBeverages";
-            this.pnlAlcoholBeverages.Size = new System.Drawing.Size(393, 42);
-            this.pnlAlcoholBeverages.TabIndex = 1;
-            // 
-            // chkAlcoholBeverages
-            // 
-            this.chkAlcoholBeverages.AutoSize = true;
-            this.chkAlcoholBeverages.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkAlcoholBeverages.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.chkAlcoholBeverages.Location = new System.Drawing.Point(3, 7);
-            this.chkAlcoholBeverages.Name = "chkAlcoholBeverages";
-            this.chkAlcoholBeverages.Size = new System.Drawing.Size(233, 28);
-            this.chkAlcoholBeverages.TabIndex = 0;
-            this.chkAlcoholBeverages.Text = "Alcohol Beverages";
-            this.chkAlcoholBeverages.UseVisualStyleBackColor = true;
-            // 
-            // pnlBreakfastBuffet
-            // 
-            this.pnlBreakfastBuffet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
-            this.pnlBreakfastBuffet.Controls.Add(this.lblBreakfastBuffetPrice);
-            this.pnlBreakfastBuffet.Controls.Add(this.chkBreakfastBuffet);
-            this.pnlBreakfastBuffet.Location = new System.Drawing.Point(5, 147);
-            this.pnlBreakfastBuffet.Name = "pnlBreakfastBuffet";
-            this.pnlBreakfastBuffet.Size = new System.Drawing.Size(393, 42);
-            this.pnlBreakfastBuffet.TabIndex = 2;
-            // 
-            // chkBreakfastBuffet
-            // 
-            this.chkBreakfastBuffet.AutoSize = true;
-            this.chkBreakfastBuffet.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBreakfastBuffet.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.chkBreakfastBuffet.Location = new System.Drawing.Point(3, 7);
-            this.chkBreakfastBuffet.Name = "chkBreakfastBuffet";
-            this.chkBreakfastBuffet.Size = new System.Drawing.Size(221, 28);
-            this.chkBreakfastBuffet.TabIndex = 0;
-            this.chkBreakfastBuffet.Text = "Breakfast Buffet";
-            this.chkBreakfastBuffet.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 34);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Consumable";
+            this.lblConsumablePrice.AutoSize = true;
+            this.lblConsumablePrice.BackColor = System.Drawing.Color.White;
+            this.lblConsumablePrice.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsumablePrice.ForeColor = System.Drawing.Color.Black;
+            this.lblConsumablePrice.Location = new System.Drawing.Point(303, 9);
+            this.lblConsumablePrice.Name = "lblConsumablePrice";
+            this.lblConsumablePrice.Size = new System.Drawing.Size(95, 34);
+            this.lblConsumablePrice.TabIndex = 31;
+            this.lblConsumablePrice.Text = "Price";
             // 
             // pnlDinnerBuffet
             // 
@@ -220,6 +154,18 @@
             this.pnlDinnerBuffet.Name = "pnlDinnerBuffet";
             this.pnlDinnerBuffet.Size = new System.Drawing.Size(393, 42);
             this.pnlDinnerBuffet.TabIndex = 30;
+            // 
+            // lblDinnerBuffetPrice
+            // 
+            this.lblDinnerBuffetPrice.AutoSize = true;
+            this.lblDinnerBuffetPrice.BackColor = System.Drawing.Color.White;
+            this.lblDinnerBuffetPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDinnerBuffetPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblDinnerBuffetPrice.Location = new System.Drawing.Point(335, 7);
+            this.lblDinnerBuffetPrice.Name = "lblDinnerBuffetPrice";
+            this.lblDinnerBuffetPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblDinnerBuffetPrice.TabIndex = 36;
+            this.lblDinnerBuffetPrice.Text = "720";
             // 
             // chkDinnerBuffet
             // 
@@ -243,6 +189,18 @@
             this.pnlLunchBuffet.Size = new System.Drawing.Size(393, 42);
             this.pnlLunchBuffet.TabIndex = 29;
             // 
+            // lblLunchBuffetPrice
+            // 
+            this.lblLunchBuffetPrice.AutoSize = true;
+            this.lblLunchBuffetPrice.BackColor = System.Drawing.Color.White;
+            this.lblLunchBuffetPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLunchBuffetPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblLunchBuffetPrice.Location = new System.Drawing.Point(335, 11);
+            this.lblLunchBuffetPrice.Name = "lblLunchBuffetPrice";
+            this.lblLunchBuffetPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblLunchBuffetPrice.TabIndex = 35;
+            this.lblLunchBuffetPrice.Text = "830";
+            // 
             // chkLunchBuffet
             // 
             this.chkLunchBuffet.AutoSize = true;
@@ -255,13 +213,127 @@
             this.chkLunchBuffet.Text = "Lunch Buffet";
             this.chkLunchBuffet.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 34);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Services";
+            // 
+            // pnlBreakfastBuffet
+            // 
+            this.pnlBreakfastBuffet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.pnlBreakfastBuffet.Controls.Add(this.lblBreakfastBuffetPrice);
+            this.pnlBreakfastBuffet.Controls.Add(this.chkBreakfastBuffet);
+            this.pnlBreakfastBuffet.Location = new System.Drawing.Point(5, 147);
+            this.pnlBreakfastBuffet.Name = "pnlBreakfastBuffet";
+            this.pnlBreakfastBuffet.Size = new System.Drawing.Size(393, 42);
+            this.pnlBreakfastBuffet.TabIndex = 2;
+            // 
+            // lblBreakfastBuffetPrice
+            // 
+            this.lblBreakfastBuffetPrice.AutoSize = true;
+            this.lblBreakfastBuffetPrice.BackColor = System.Drawing.Color.White;
+            this.lblBreakfastBuffetPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBreakfastBuffetPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblBreakfastBuffetPrice.Location = new System.Drawing.Point(335, 11);
+            this.lblBreakfastBuffetPrice.Name = "lblBreakfastBuffetPrice";
+            this.lblBreakfastBuffetPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblBreakfastBuffetPrice.TabIndex = 34;
+            this.lblBreakfastBuffetPrice.Text = "720";
+            // 
+            // chkBreakfastBuffet
+            // 
+            this.chkBreakfastBuffet.AutoSize = true;
+            this.chkBreakfastBuffet.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBreakfastBuffet.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chkBreakfastBuffet.Location = new System.Drawing.Point(3, 7);
+            this.chkBreakfastBuffet.Name = "chkBreakfastBuffet";
+            this.chkBreakfastBuffet.Size = new System.Drawing.Size(221, 28);
+            this.chkBreakfastBuffet.TabIndex = 0;
+            this.chkBreakfastBuffet.Text = "Breakfast Buffet";
+            this.chkBreakfastBuffet.UseVisualStyleBackColor = true;
+            // 
+            // pnlAlcoholBeverages
+            // 
+            this.pnlAlcoholBeverages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.pnlAlcoholBeverages.Controls.Add(this.lblAlcoholBeveragesPrice);
+            this.pnlAlcoholBeverages.Controls.Add(this.chkAlcoholBeverages);
+            this.pnlAlcoholBeverages.Location = new System.Drawing.Point(5, 99);
+            this.pnlAlcoholBeverages.Name = "pnlAlcoholBeverages";
+            this.pnlAlcoholBeverages.Size = new System.Drawing.Size(393, 42);
+            this.pnlAlcoholBeverages.TabIndex = 1;
+            // 
+            // lblAlcoholBeveragesPrice
+            // 
+            this.lblAlcoholBeveragesPrice.AutoSize = true;
+            this.lblAlcoholBeveragesPrice.BackColor = System.Drawing.Color.White;
+            this.lblAlcoholBeveragesPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlcoholBeveragesPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblAlcoholBeveragesPrice.Location = new System.Drawing.Point(335, 8);
+            this.lblAlcoholBeveragesPrice.Name = "lblAlcoholBeveragesPrice";
+            this.lblAlcoholBeveragesPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblAlcoholBeveragesPrice.TabIndex = 33;
+            this.lblAlcoholBeveragesPrice.Text = "880";
+            // 
+            // chkAlcoholBeverages
+            // 
+            this.chkAlcoholBeverages.AutoSize = true;
+            this.chkAlcoholBeverages.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAlcoholBeverages.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chkAlcoholBeverages.Location = new System.Drawing.Point(3, 7);
+            this.chkAlcoholBeverages.Name = "chkAlcoholBeverages";
+            this.chkAlcoholBeverages.Size = new System.Drawing.Size(233, 28);
+            this.chkAlcoholBeverages.TabIndex = 0;
+            this.chkAlcoholBeverages.Text = "Alcohol Beverages";
+            this.chkAlcoholBeverages.UseVisualStyleBackColor = true;
+            // 
+            // pnlCoffeeKit
+            // 
+            this.pnlCoffeeKit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
+            this.pnlCoffeeKit.Controls.Add(this.lblCoffeeKitPrice);
+            this.pnlCoffeeKit.Controls.Add(this.chkCoffeeKit);
+            this.pnlCoffeeKit.Location = new System.Drawing.Point(5, 51);
+            this.pnlCoffeeKit.Name = "pnlCoffeeKit";
+            this.pnlCoffeeKit.Size = new System.Drawing.Size(393, 42);
+            this.pnlCoffeeKit.TabIndex = 0;
+            // 
+            // lblCoffeeKitPrice
+            // 
+            this.lblCoffeeKitPrice.AutoSize = true;
+            this.lblCoffeeKitPrice.BackColor = System.Drawing.Color.White;
+            this.lblCoffeeKitPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoffeeKitPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblCoffeeKitPrice.Location = new System.Drawing.Point(336, 8);
+            this.lblCoffeeKitPrice.Name = "lblCoffeeKitPrice";
+            this.lblCoffeeKitPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblCoffeeKitPrice.TabIndex = 32;
+            this.lblCoffeeKitPrice.Text = "300";
+            // 
+            // chkCoffeeKit
+            // 
+            this.chkCoffeeKit.AutoSize = true;
+            this.chkCoffeeKit.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCoffeeKit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chkCoffeeKit.Location = new System.Drawing.Point(3, 7);
+            this.chkCoffeeKit.Name = "chkCoffeeKit";
+            this.chkCoffeeKit.Size = new System.Drawing.Size(149, 28);
+            this.chkCoffeeKit.TabIndex = 0;
+            this.chkCoffeeKit.Text = "Coffee Kit";
+            this.chkCoffeeKit.UseVisualStyleBackColor = true;
+            // 
             // pnlHygiene
             // 
             this.pnlHygiene.BackColor = System.Drawing.Color.White;
             this.pnlHygiene.Controls.Add(this.lblHygienePrice);
             this.pnlHygiene.Controls.Add(this.pnlOintment);
             this.pnlHygiene.Controls.Add(this.pnlBathrobesAndSlippers);
-            this.pnlHygiene.Controls.Add(this.lblHygiene);
+            this.pnlHygiene.Controls.Add(this.lblEssential);
             this.pnlHygiene.Controls.Add(this.pnlTissueBox);
             this.pnlHygiene.Controls.Add(this.pnlToiletries);
             this.pnlHygiene.Controls.Add(this.pnlLotion);
@@ -269,6 +341,18 @@
             this.pnlHygiene.Name = "pnlHygiene";
             this.pnlHygiene.Size = new System.Drawing.Size(402, 288);
             this.pnlHygiene.TabIndex = 29;
+            // 
+            // lblHygienePrice
+            // 
+            this.lblHygienePrice.AutoSize = true;
+            this.lblHygienePrice.BackColor = System.Drawing.Color.White;
+            this.lblHygienePrice.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHygienePrice.ForeColor = System.Drawing.Color.Black;
+            this.lblHygienePrice.Location = new System.Drawing.Point(303, 9);
+            this.lblHygienePrice.Name = "lblHygienePrice";
+            this.lblHygienePrice.Size = new System.Drawing.Size(95, 34);
+            this.lblHygienePrice.TabIndex = 32;
+            this.lblHygienePrice.Text = "Price";
             // 
             // pnlOintment
             // 
@@ -279,6 +363,18 @@
             this.pnlOintment.Name = "pnlOintment";
             this.pnlOintment.Size = new System.Drawing.Size(393, 42);
             this.pnlOintment.TabIndex = 30;
+            // 
+            // lblOintmentPrice
+            // 
+            this.lblOintmentPrice.AutoSize = true;
+            this.lblOintmentPrice.BackColor = System.Drawing.Color.White;
+            this.lblOintmentPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOintmentPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblOintmentPrice.Location = new System.Drawing.Point(335, 8);
+            this.lblOintmentPrice.Name = "lblOintmentPrice";
+            this.lblOintmentPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblOintmentPrice.TabIndex = 37;
+            this.lblOintmentPrice.Text = "350";
             // 
             // chkOintment
             // 
@@ -302,6 +398,18 @@
             this.pnlBathrobesAndSlippers.Size = new System.Drawing.Size(393, 42);
             this.pnlBathrobesAndSlippers.TabIndex = 29;
             // 
+            // lblBathrobesAndSlippersPrice
+            // 
+            this.lblBathrobesAndSlippersPrice.AutoSize = true;
+            this.lblBathrobesAndSlippersPrice.BackColor = System.Drawing.Color.White;
+            this.lblBathrobesAndSlippersPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBathrobesAndSlippersPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblBathrobesAndSlippersPrice.Location = new System.Drawing.Point(335, 11);
+            this.lblBathrobesAndSlippersPrice.Name = "lblBathrobesAndSlippersPrice";
+            this.lblBathrobesAndSlippersPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblBathrobesAndSlippersPrice.TabIndex = 36;
+            this.lblBathrobesAndSlippersPrice.Text = "250";
+            // 
             // chkBathrobesAndSlippers
             // 
             this.chkBathrobesAndSlippers.AutoSize = true;
@@ -314,16 +422,16 @@
             this.chkBathrobesAndSlippers.Text = "Bathrobes and slippers";
             this.chkBathrobesAndSlippers.UseVisualStyleBackColor = true;
             // 
-            // lblHygiene
+            // lblEssential
             // 
-            this.lblHygiene.AutoSize = true;
-            this.lblHygiene.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHygiene.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblHygiene.Location = new System.Drawing.Point(3, 9);
-            this.lblHygiene.Name = "lblHygiene";
-            this.lblHygiene.Size = new System.Drawing.Size(127, 34);
-            this.lblHygiene.TabIndex = 28;
-            this.lblHygiene.Text = "Hygiene";
+            this.lblEssential.AutoSize = true;
+            this.lblEssential.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEssential.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblEssential.Location = new System.Drawing.Point(3, 9);
+            this.lblEssential.Name = "lblEssential";
+            this.lblEssential.Size = new System.Drawing.Size(175, 34);
+            this.lblEssential.TabIndex = 28;
+            this.lblEssential.Text = "Essentials";
             // 
             // pnlTissueBox
             // 
@@ -334,6 +442,18 @@
             this.pnlTissueBox.Name = "pnlTissueBox";
             this.pnlTissueBox.Size = new System.Drawing.Size(393, 42);
             this.pnlTissueBox.TabIndex = 2;
+            // 
+            // lblTissueBoxPrice
+            // 
+            this.lblTissueBoxPrice.AutoSize = true;
+            this.lblTissueBoxPrice.BackColor = System.Drawing.Color.White;
+            this.lblTissueBoxPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTissueBoxPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblTissueBoxPrice.Location = new System.Drawing.Point(335, 8);
+            this.lblTissueBoxPrice.Name = "lblTissueBoxPrice";
+            this.lblTissueBoxPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblTissueBoxPrice.TabIndex = 35;
+            this.lblTissueBoxPrice.Text = "150";
             // 
             // chkTissueBox
             // 
@@ -357,6 +477,18 @@
             this.pnlToiletries.Size = new System.Drawing.Size(393, 42);
             this.pnlToiletries.TabIndex = 1;
             // 
+            // lblToiletriesPrice
+            // 
+            this.lblToiletriesPrice.AutoSize = true;
+            this.lblToiletriesPrice.BackColor = System.Drawing.Color.White;
+            this.lblToiletriesPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToiletriesPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblToiletriesPrice.Location = new System.Drawing.Point(335, 7);
+            this.lblToiletriesPrice.Name = "lblToiletriesPrice";
+            this.lblToiletriesPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblToiletriesPrice.TabIndex = 34;
+            this.lblToiletriesPrice.Text = "300";
+            // 
             // chkToiletries
             // 
             this.chkToiletries.AutoSize = true;
@@ -378,6 +510,18 @@
             this.pnlLotion.Name = "pnlLotion";
             this.pnlLotion.Size = new System.Drawing.Size(393, 42);
             this.pnlLotion.TabIndex = 0;
+            // 
+            // lblLotionPrice
+            // 
+            this.lblLotionPrice.AutoSize = true;
+            this.lblLotionPrice.BackColor = System.Drawing.Color.White;
+            this.lblLotionPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLotionPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblLotionPrice.Location = new System.Drawing.Point(335, 8);
+            this.lblLotionPrice.Name = "lblLotionPrice";
+            this.lblLotionPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblLotionPrice.TabIndex = 33;
+            this.lblLotionPrice.Text = "130";
             // 
             // chkLotion
             // 
@@ -406,6 +550,18 @@
             this.pnlOthers.Size = new System.Drawing.Size(402, 288);
             this.pnlOthers.TabIndex = 30;
             // 
+            // lblOthersPrice
+            // 
+            this.lblOthersPrice.AutoSize = true;
+            this.lblOthersPrice.BackColor = System.Drawing.Color.White;
+            this.lblOthersPrice.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOthersPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblOthersPrice.Location = new System.Drawing.Point(303, 9);
+            this.lblOthersPrice.Name = "lblOthersPrice";
+            this.lblOthersPrice.Size = new System.Drawing.Size(95, 34);
+            this.lblOthersPrice.TabIndex = 32;
+            this.lblOthersPrice.Text = "Price";
+            // 
             // pnlCouch
             // 
             this.pnlCouch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
@@ -415,6 +571,18 @@
             this.pnlCouch.Name = "pnlCouch";
             this.pnlCouch.Size = new System.Drawing.Size(393, 42);
             this.pnlCouch.TabIndex = 30;
+            // 
+            // lblCouchPrice
+            // 
+            this.lblCouchPrice.AutoSize = true;
+            this.lblCouchPrice.BackColor = System.Drawing.Color.White;
+            this.lblCouchPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCouchPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblCouchPrice.Location = new System.Drawing.Point(335, 11);
+            this.lblCouchPrice.Name = "lblCouchPrice";
+            this.lblCouchPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblCouchPrice.TabIndex = 37;
+            this.lblCouchPrice.Text = "450";
             // 
             // chkCouch
             // 
@@ -437,6 +605,18 @@
             this.pnlTable.Name = "pnlTable";
             this.pnlTable.Size = new System.Drawing.Size(393, 42);
             this.pnlTable.TabIndex = 29;
+            // 
+            // lblTablePrice
+            // 
+            this.lblTablePrice.AutoSize = true;
+            this.lblTablePrice.BackColor = System.Drawing.Color.White;
+            this.lblTablePrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTablePrice.ForeColor = System.Drawing.Color.Black;
+            this.lblTablePrice.Location = new System.Drawing.Point(335, 8);
+            this.lblTablePrice.Name = "lblTablePrice";
+            this.lblTablePrice.Size = new System.Drawing.Size(46, 24);
+            this.lblTablePrice.TabIndex = 36;
+            this.lblTablePrice.Text = "320";
             // 
             // chkTable
             // 
@@ -471,6 +651,18 @@
             this.pnlChair.Size = new System.Drawing.Size(393, 42);
             this.pnlChair.TabIndex = 2;
             // 
+            // lblChairPrice
+            // 
+            this.lblChairPrice.AutoSize = true;
+            this.lblChairPrice.BackColor = System.Drawing.Color.White;
+            this.lblChairPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChairPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblChairPrice.Location = new System.Drawing.Point(335, 7);
+            this.lblChairPrice.Name = "lblChairPrice";
+            this.lblChairPrice.Size = new System.Drawing.Size(34, 24);
+            this.lblChairPrice.TabIndex = 36;
+            this.lblChairPrice.Text = "60";
+            // 
             // chkChair
             // 
             this.chkChair.AutoSize = true;
@@ -492,6 +684,18 @@
             this.pnlSpeaker.Name = "pnlSpeaker";
             this.pnlSpeaker.Size = new System.Drawing.Size(393, 42);
             this.pnlSpeaker.TabIndex = 1;
+            // 
+            // lblSpeakerPrice
+            // 
+            this.lblSpeakerPrice.AutoSize = true;
+            this.lblSpeakerPrice.BackColor = System.Drawing.Color.White;
+            this.lblSpeakerPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpeakerPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblSpeakerPrice.Location = new System.Drawing.Point(335, 8);
+            this.lblSpeakerPrice.Name = "lblSpeakerPrice";
+            this.lblSpeakerPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblSpeakerPrice.TabIndex = 35;
+            this.lblSpeakerPrice.Text = "450";
             // 
             // chkSpeaker
             // 
@@ -515,6 +719,18 @@
             this.pnlArcadeGames.Size = new System.Drawing.Size(393, 42);
             this.pnlArcadeGames.TabIndex = 0;
             // 
+            // lblArcadeGamesPrice
+            // 
+            this.lblArcadeGamesPrice.AutoSize = true;
+            this.lblArcadeGamesPrice.BackColor = System.Drawing.Color.White;
+            this.lblArcadeGamesPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArcadeGamesPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblArcadeGamesPrice.Location = new System.Drawing.Point(335, 8);
+            this.lblArcadeGamesPrice.Name = "lblArcadeGamesPrice";
+            this.lblArcadeGamesPrice.Size = new System.Drawing.Size(46, 24);
+            this.lblArcadeGamesPrice.TabIndex = 35;
+            this.lblArcadeGamesPrice.Text = "700";
+            // 
             // chkArcadeGames
             // 
             this.chkArcadeGames.AutoSize = true;
@@ -526,42 +742,6 @@
             this.chkArcadeGames.TabIndex = 0;
             this.chkArcadeGames.Text = "Arcade Games";
             this.chkArcadeGames.UseVisualStyleBackColor = true;
-            // 
-            // lblConsumablePrice
-            // 
-            this.lblConsumablePrice.AutoSize = true;
-            this.lblConsumablePrice.BackColor = System.Drawing.Color.White;
-            this.lblConsumablePrice.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsumablePrice.ForeColor = System.Drawing.Color.Black;
-            this.lblConsumablePrice.Location = new System.Drawing.Point(303, 9);
-            this.lblConsumablePrice.Name = "lblConsumablePrice";
-            this.lblConsumablePrice.Size = new System.Drawing.Size(95, 34);
-            this.lblConsumablePrice.TabIndex = 31;
-            this.lblConsumablePrice.Text = "Price";
-            // 
-            // lblOthersPrice
-            // 
-            this.lblOthersPrice.AutoSize = true;
-            this.lblOthersPrice.BackColor = System.Drawing.Color.White;
-            this.lblOthersPrice.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOthersPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblOthersPrice.Location = new System.Drawing.Point(303, 9);
-            this.lblOthersPrice.Name = "lblOthersPrice";
-            this.lblOthersPrice.Size = new System.Drawing.Size(95, 34);
-            this.lblOthersPrice.TabIndex = 32;
-            this.lblOthersPrice.Text = "Price";
-            // 
-            // lblHygienePrice
-            // 
-            this.lblHygienePrice.AutoSize = true;
-            this.lblHygienePrice.BackColor = System.Drawing.Color.White;
-            this.lblHygienePrice.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHygienePrice.ForeColor = System.Drawing.Color.Black;
-            this.lblHygienePrice.Location = new System.Drawing.Point(303, 9);
-            this.lblHygienePrice.Name = "lblHygienePrice";
-            this.lblHygienePrice.Size = new System.Drawing.Size(95, 34);
-            this.lblHygienePrice.TabIndex = 32;
-            this.lblHygienePrice.Text = "Price";
             // 
             // btnSubmitAmenties
             // 
@@ -596,186 +776,6 @@
             this.lblTotalPrice.TabIndex = 29;
             this.lblTotalPrice.Text = "Total Price:";
             // 
-            // lblCoffeeKitPrice
-            // 
-            this.lblCoffeeKitPrice.AutoSize = true;
-            this.lblCoffeeKitPrice.BackColor = System.Drawing.Color.White;
-            this.lblCoffeeKitPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoffeeKitPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblCoffeeKitPrice.Location = new System.Drawing.Point(336, 8);
-            this.lblCoffeeKitPrice.Name = "lblCoffeeKitPrice";
-            this.lblCoffeeKitPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblCoffeeKitPrice.TabIndex = 32;
-            this.lblCoffeeKitPrice.Text = "300";
-            // 
-            // lblAlcoholBeveragesPrice
-            // 
-            this.lblAlcoholBeveragesPrice.AutoSize = true;
-            this.lblAlcoholBeveragesPrice.BackColor = System.Drawing.Color.White;
-            this.lblAlcoholBeveragesPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlcoholBeveragesPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblAlcoholBeveragesPrice.Location = new System.Drawing.Point(335, 8);
-            this.lblAlcoholBeveragesPrice.Name = "lblAlcoholBeveragesPrice";
-            this.lblAlcoholBeveragesPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblAlcoholBeveragesPrice.TabIndex = 33;
-            this.lblAlcoholBeveragesPrice.Text = "880";
-            // 
-            // lblBreakfastBuffetPrice
-            // 
-            this.lblBreakfastBuffetPrice.AutoSize = true;
-            this.lblBreakfastBuffetPrice.BackColor = System.Drawing.Color.White;
-            this.lblBreakfastBuffetPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreakfastBuffetPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblBreakfastBuffetPrice.Location = new System.Drawing.Point(335, 11);
-            this.lblBreakfastBuffetPrice.Name = "lblBreakfastBuffetPrice";
-            this.lblBreakfastBuffetPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblBreakfastBuffetPrice.TabIndex = 34;
-            this.lblBreakfastBuffetPrice.Text = "720";
-            // 
-            // lblLotionPrice
-            // 
-            this.lblLotionPrice.AutoSize = true;
-            this.lblLotionPrice.BackColor = System.Drawing.Color.White;
-            this.lblLotionPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLotionPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblLotionPrice.Location = new System.Drawing.Point(335, 8);
-            this.lblLotionPrice.Name = "lblLotionPrice";
-            this.lblLotionPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblLotionPrice.TabIndex = 33;
-            this.lblLotionPrice.Text = "130";
-            // 
-            // lblToiletriesPrice
-            // 
-            this.lblToiletriesPrice.AutoSize = true;
-            this.lblToiletriesPrice.BackColor = System.Drawing.Color.White;
-            this.lblToiletriesPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToiletriesPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblToiletriesPrice.Location = new System.Drawing.Point(335, 7);
-            this.lblToiletriesPrice.Name = "lblToiletriesPrice";
-            this.lblToiletriesPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblToiletriesPrice.TabIndex = 34;
-            this.lblToiletriesPrice.Text = "300";
-            // 
-            // lblTissueBoxPrice
-            // 
-            this.lblTissueBoxPrice.AutoSize = true;
-            this.lblTissueBoxPrice.BackColor = System.Drawing.Color.White;
-            this.lblTissueBoxPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTissueBoxPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblTissueBoxPrice.Location = new System.Drawing.Point(335, 8);
-            this.lblTissueBoxPrice.Name = "lblTissueBoxPrice";
-            this.lblTissueBoxPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblTissueBoxPrice.TabIndex = 35;
-            this.lblTissueBoxPrice.Text = "150";
-            // 
-            // lblBathrobesAndSlippersPrice
-            // 
-            this.lblBathrobesAndSlippersPrice.AutoSize = true;
-            this.lblBathrobesAndSlippersPrice.BackColor = System.Drawing.Color.White;
-            this.lblBathrobesAndSlippersPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBathrobesAndSlippersPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblBathrobesAndSlippersPrice.Location = new System.Drawing.Point(335, 11);
-            this.lblBathrobesAndSlippersPrice.Name = "lblBathrobesAndSlippersPrice";
-            this.lblBathrobesAndSlippersPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblBathrobesAndSlippersPrice.TabIndex = 36;
-            this.lblBathrobesAndSlippersPrice.Text = "250";
-            // 
-            // lblArcadeGamesPrice
-            // 
-            this.lblArcadeGamesPrice.AutoSize = true;
-            this.lblArcadeGamesPrice.BackColor = System.Drawing.Color.White;
-            this.lblArcadeGamesPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArcadeGamesPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblArcadeGamesPrice.Location = new System.Drawing.Point(335, 8);
-            this.lblArcadeGamesPrice.Name = "lblArcadeGamesPrice";
-            this.lblArcadeGamesPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblArcadeGamesPrice.TabIndex = 35;
-            this.lblArcadeGamesPrice.Text = "700";
-            // 
-            // lblSpeakerPrice
-            // 
-            this.lblSpeakerPrice.AutoSize = true;
-            this.lblSpeakerPrice.BackColor = System.Drawing.Color.White;
-            this.lblSpeakerPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpeakerPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblSpeakerPrice.Location = new System.Drawing.Point(335, 8);
-            this.lblSpeakerPrice.Name = "lblSpeakerPrice";
-            this.lblSpeakerPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblSpeakerPrice.TabIndex = 35;
-            this.lblSpeakerPrice.Text = "450";
-            // 
-            // lblChairPrice
-            // 
-            this.lblChairPrice.AutoSize = true;
-            this.lblChairPrice.BackColor = System.Drawing.Color.White;
-            this.lblChairPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChairPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblChairPrice.Location = new System.Drawing.Point(335, 7);
-            this.lblChairPrice.Name = "lblChairPrice";
-            this.lblChairPrice.Size = new System.Drawing.Size(34, 24);
-            this.lblChairPrice.TabIndex = 36;
-            this.lblChairPrice.Text = "60";
-            // 
-            // lblTablePrice
-            // 
-            this.lblTablePrice.AutoSize = true;
-            this.lblTablePrice.BackColor = System.Drawing.Color.White;
-            this.lblTablePrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTablePrice.ForeColor = System.Drawing.Color.Black;
-            this.lblTablePrice.Location = new System.Drawing.Point(335, 8);
-            this.lblTablePrice.Name = "lblTablePrice";
-            this.lblTablePrice.Size = new System.Drawing.Size(46, 24);
-            this.lblTablePrice.TabIndex = 36;
-            this.lblTablePrice.Text = "320";
-            // 
-            // lblCouchPrice
-            // 
-            this.lblCouchPrice.AutoSize = true;
-            this.lblCouchPrice.BackColor = System.Drawing.Color.White;
-            this.lblCouchPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCouchPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblCouchPrice.Location = new System.Drawing.Point(335, 11);
-            this.lblCouchPrice.Name = "lblCouchPrice";
-            this.lblCouchPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblCouchPrice.TabIndex = 37;
-            this.lblCouchPrice.Text = "450";
-            // 
-            // lblLunchBuffetPrice
-            // 
-            this.lblLunchBuffetPrice.AutoSize = true;
-            this.lblLunchBuffetPrice.BackColor = System.Drawing.Color.White;
-            this.lblLunchBuffetPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLunchBuffetPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblLunchBuffetPrice.Location = new System.Drawing.Point(335, 11);
-            this.lblLunchBuffetPrice.Name = "lblLunchBuffetPrice";
-            this.lblLunchBuffetPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblLunchBuffetPrice.TabIndex = 35;
-            this.lblLunchBuffetPrice.Text = "830";
-            // 
-            // lblDinnerBuffetPrice
-            // 
-            this.lblDinnerBuffetPrice.AutoSize = true;
-            this.lblDinnerBuffetPrice.BackColor = System.Drawing.Color.White;
-            this.lblDinnerBuffetPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDinnerBuffetPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblDinnerBuffetPrice.Location = new System.Drawing.Point(335, 7);
-            this.lblDinnerBuffetPrice.Name = "lblDinnerBuffetPrice";
-            this.lblDinnerBuffetPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblDinnerBuffetPrice.TabIndex = 36;
-            this.lblDinnerBuffetPrice.Text = "720";
-            // 
-            // lblOintmentPrice
-            // 
-            this.lblOintmentPrice.AutoSize = true;
-            this.lblOintmentPrice.BackColor = System.Drawing.Color.White;
-            this.lblOintmentPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOintmentPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblOintmentPrice.Location = new System.Drawing.Point(335, 8);
-            this.lblOintmentPrice.Name = "lblOintmentPrice";
-            this.lblOintmentPrice.Size = new System.Drawing.Size(46, 24);
-            this.lblOintmentPrice.TabIndex = 37;
-            this.lblOintmentPrice.Text = "350";
-            // 
             // frmAmenities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -792,16 +792,16 @@
             this.Text = "Amenities";
             this.pnlConsumable.ResumeLayout(false);
             this.pnlConsumable.PerformLayout();
-            this.pnlCoffeeKit.ResumeLayout(false);
-            this.pnlCoffeeKit.PerformLayout();
-            this.pnlAlcoholBeverages.ResumeLayout(false);
-            this.pnlAlcoholBeverages.PerformLayout();
-            this.pnlBreakfastBuffet.ResumeLayout(false);
-            this.pnlBreakfastBuffet.PerformLayout();
             this.pnlDinnerBuffet.ResumeLayout(false);
             this.pnlDinnerBuffet.PerformLayout();
             this.pnlLunchBuffet.ResumeLayout(false);
             this.pnlLunchBuffet.PerformLayout();
+            this.pnlBreakfastBuffet.ResumeLayout(false);
+            this.pnlBreakfastBuffet.PerformLayout();
+            this.pnlAlcoholBeverages.ResumeLayout(false);
+            this.pnlAlcoholBeverages.PerformLayout();
+            this.pnlCoffeeKit.ResumeLayout(false);
+            this.pnlCoffeeKit.PerformLayout();
             this.pnlHygiene.ResumeLayout(false);
             this.pnlHygiene.PerformLayout();
             this.pnlOintment.ResumeLayout(false);
@@ -855,7 +855,7 @@
         private System.Windows.Forms.CheckBox chkOintment;
         private System.Windows.Forms.Panel pnlBathrobesAndSlippers;
         private System.Windows.Forms.CheckBox chkBathrobesAndSlippers;
-        private System.Windows.Forms.Label lblHygiene;
+        private System.Windows.Forms.Label lblEssential;
         private System.Windows.Forms.Panel pnlTissueBox;
         private System.Windows.Forms.CheckBox chkTissueBox;
         private System.Windows.Forms.Panel pnlToiletries;
