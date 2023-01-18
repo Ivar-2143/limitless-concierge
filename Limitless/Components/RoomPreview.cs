@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Limitless.Views;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -9,17 +11,20 @@ using System.Windows.Forms;
 
 namespace Limitless
 {
-    internal class RoomPreview: Panel
+    public class RoomPreview: Panel
     {
         private Room _room;
         private frmFrontPage _ownerForm;
         private Label _roomName, _roomPrice, _bedCapacity;
         private Button _btnView, _btnEdit, _btnDelete;
         private PictureBox _roomImg;
-        public RoomPreview(Room room, frmFrontPage ownerForm)
+        private SqlConnection _db;
+        public RoomPreview(Room room, frmFrontPage ownerForm, SqlConnection db)
         {
             _room = room;
             _ownerForm = ownerForm;
+            _db= db;
+
             Width = 680;
             Height = 138;
             Margin = new Padding(4, 4, 4, 4);
@@ -113,13 +118,27 @@ namespace Limitless
 
         private void DeleteRoom_Click(object sender, EventArgs e)
         {
+            string message = "Are you sure you want to Delete this Data?";
+            string title = "Delete Message";
+            DialogResult result = MessageBox.Show(message, title, MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                _db.Open();
+                SqlCommand cmd = _db.CreateCommand();
+                cmd.CommandText = "DELETE FROM Room WHERE RoomNumber = '" + _room.RoomNum + "'";
+                cmd.ExecuteNonQuery();
+                _db.Close();
 
+                _ownerForm.ReloadLayout();
+            }
         }
 
         private void EditRoom_Click(object sender, EventArgs e)
         {
-
+            ModifyRoomForm roomForm = new ModifyRoomForm(_room,_db,_ownerForm,this);
+            roomForm.ShowDialog();
         }
+
             
     }
 }
