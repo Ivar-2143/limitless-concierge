@@ -14,7 +14,7 @@ namespace Limitless
         private Room _room;
         private frmFrontPage _ownerForm;
         private Label _roomName, _roomPrice, _bedCapacity;
-        private Button _btnView;
+        private Button _btnView, _btnEdit, _btnDelete;
         private PictureBox _roomImg;
         public RoomPreview(Room room, frmFrontPage ownerForm)
         {
@@ -31,6 +31,8 @@ namespace Limitless
             _roomPrice = new Label();
             _bedCapacity = new Label();
             _btnView = new Button();
+            _btnEdit = new Button();
+            _btnDelete = new Button();
             _roomImg = new PictureBox();
 
             _roomName.AutoSize= true;
@@ -66,25 +68,57 @@ namespace Limitless
 
 
             _btnView.Text = "View";
-            _btnView.Font =  new Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            _btnView.Font =  new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             _btnView.BackColor = Color.White;
             _btnView.ForeColor = Color.Black;
-            _btnView.Location = new Point(505, 79);
-            _btnView.Size = new Size(151, 42);
+            _btnView.Location = new Point(505, 3);
+            _btnView.Size = new Size(151, 40);
             _btnView.UseVisualStyleBackColor = true;
             _btnView.Click += new EventHandler(openBooking_Click);
+
+            _btnEdit.Text = "Edit";
+            _btnEdit.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            _btnEdit.BackColor = Color.White;
+            _btnEdit.ForeColor = Color.Black;
+            _btnEdit.Location = new Point(505, 48);
+            _btnEdit.Size = new Size(151, 40);
+            _btnEdit.UseVisualStyleBackColor = true;
+            _btnEdit.Click += new EventHandler(EditRoom_Click);
+
+            _btnDelete.Text = "Delete";
+            _btnDelete.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            _btnDelete.BackColor = Color.White;
+            _btnDelete.ForeColor = Color.Black;
+            _btnDelete.Location = new Point(505, 93);
+            _btnDelete.Size = new Size(151, 40);
+            _btnDelete.UseVisualStyleBackColor = true;
+            _btnDelete.Click += new EventHandler(DeleteRoom_Click);
+
+
 
             Controls.Add(_roomImg);
             Controls.Add(_roomName);
             Controls.Add(_bedCapacity);
             Controls.Add(_roomPrice);
             Controls.Add(_btnView);
+            Controls.Add(_btnEdit);
+            Controls.Add(_btnDelete);
         }
         private void openBooking_Click(object sender, EventArgs e)
         {
             frmSingleViewForm roomView = new frmSingleViewForm(_room,_ownerForm);
             roomView.Show();
             _ownerForm.Visible = false;
+        }
+
+        private void DeleteRoom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditRoom_Click(object sender, EventArgs e)
+        {
+
         }
             
     }
