@@ -1,1 +1,0 @@
-School Project - Hotel Reservation with C#

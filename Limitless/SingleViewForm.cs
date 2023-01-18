@@ -21,12 +21,29 @@ namespace Limitless
             lblRoomName.Text = room.RoomName;
             lblRoomPrice.Text = $"{Convert.ToString(room.Price)}/per night";
             lblRoomID.Text = $"{room.RoomName}-{room.RoomNum}";
+            ptbPictureSingle.Image = Image.FromFile(room.Image);
+            lblRoomNum.Text = Convert.ToString(room.RoomNum);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             Close();
             _prevForm.Visible = true;
+        }
+
+        private void frmSingleViewForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
