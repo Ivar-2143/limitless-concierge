@@ -12,9 +12,21 @@ namespace Limitless
 {
     public partial class frmSingleViewForm : Form
     {
-        public frmSingleViewForm()
+       private frmFrontPage _prevForm;
+        public frmSingleViewForm(Room room, frmFrontPage form)
         {
+            _prevForm = form;
             InitializeComponent();
+
+            lblRoomName.Text = room.RoomName;
+            lblRoomPrice.Text = $"{Convert.ToString(room.Price)}/per night";
+            lblRoomID.Text = $"{room.RoomName}-{room.RoomNum}";
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
+            _prevForm.Visible = true;
         }
     }
 }

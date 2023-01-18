@@ -34,14 +34,13 @@
             this.lblGuestNo = new System.Windows.Forms.Label();
             this.lblDaysOfStay = new System.Windows.Forms.Label();
             this.lblGuestName = new System.Windows.Forms.Label();
-            this.txtRoomNo = new System.Windows.Forms.TextBox();
             this.txtGuestNo = new System.Windows.Forms.TextBox();
             this.txtDaysOfStay = new System.Windows.Forms.TextBox();
             this.txtGuestName = new System.Windows.Forms.TextBox();
             this.lblRoomName = new System.Windows.Forms.Label();
             this.lblRoomDetails = new System.Windows.Forms.Label();
-            this.lblPriceRoom = new System.Windows.Forms.Label();
-            this.lblTypeRoom = new System.Windows.Forms.Label();
+            this.lblRoomPrice = new System.Windows.Forms.Label();
+            this.lblRoomID = new System.Windows.Forms.Label();
             this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
             this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
             this.lblCheckIn = new System.Windows.Forms.Label();
@@ -51,15 +50,17 @@
             this.pnlAmenities = new System.Windows.Forms.Panel();
             this.lblAmenities = new System.Windows.Forms.Label();
             this.btnSubmitSingle = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPictureSingle)).BeginInit();
             this.SuspendLayout();
             // 
             // ptbPictureSingle
             // 
             this.ptbPictureSingle.Image = ((System.Drawing.Image)(resources.GetObject("ptbPictureSingle.Image")));
-            this.ptbPictureSingle.Location = new System.Drawing.Point(12, 12);
+            this.ptbPictureSingle.Location = new System.Drawing.Point(12, 52);
             this.ptbPictureSingle.Name = "ptbPictureSingle";
-            this.ptbPictureSingle.Size = new System.Drawing.Size(326, 380);
+            this.ptbPictureSingle.Size = new System.Drawing.Size(326, 340);
             this.ptbPictureSingle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPictureSingle.TabIndex = 0;
             this.ptbPictureSingle.TabStop = false;
@@ -108,14 +109,6 @@
             this.lblGuestName.TabIndex = 6;
             this.lblGuestName.Text = "Guest Name:";
             // 
-            // txtRoomNo
-            // 
-            this.txtRoomNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoomNo.Location = new System.Drawing.Point(469, 128);
-            this.txtRoomNo.Name = "txtRoomNo";
-            this.txtRoomNo.Size = new System.Drawing.Size(72, 26);
-            this.txtRoomNo.TabIndex = 7;
-            // 
             // txtGuestNo
             // 
             this.txtGuestNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,12 +135,15 @@
             // 
             // lblRoomName
             // 
+            this.lblRoomName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRoomName.AutoSize = true;
-            this.lblRoomName.Font = new System.Drawing.Font("Consolas", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomName.Font = new System.Drawing.Font("Consolas", 28F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblRoomName.Location = new System.Drawing.Point(2, 395);
+            this.lblRoomName.Location = new System.Drawing.Point(12, 426);
             this.lblRoomName.Name = "lblRoomName";
-            this.lblRoomName.Size = new System.Drawing.Size(347, 75);
+            this.lblRoomName.Size = new System.Drawing.Size(209, 45);
             this.lblRoomName.TabIndex = 12;
             this.lblRoomName.Text = "Pipe Room";
             // 
@@ -162,27 +158,27 @@
             this.lblRoomDetails.TabIndex = 13;
             this.lblRoomDetails.Text = "Room Details";
             // 
-            // lblPriceRoom
+            // lblRoomPrice
             // 
-            this.lblPriceRoom.AutoSize = true;
-            this.lblPriceRoom.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceRoom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPriceRoom.Location = new System.Drawing.Point(351, 87);
-            this.lblPriceRoom.Name = "lblPriceRoom";
-            this.lblPriceRoom.Size = new System.Drawing.Size(286, 24);
-            this.lblPriceRoom.TabIndex = 14;
-            this.lblPriceRoom.Text = "Price: 1,500/ per night";
+            this.lblRoomPrice.AutoSize = true;
+            this.lblRoomPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRoomPrice.Location = new System.Drawing.Point(351, 87);
+            this.lblRoomPrice.Name = "lblRoomPrice";
+            this.lblRoomPrice.Size = new System.Drawing.Size(286, 24);
+            this.lblRoomPrice.TabIndex = 14;
+            this.lblRoomPrice.Text = "Price: 1,500/ per night";
             // 
-            // lblTypeRoom
+            // lblRoomID
             // 
-            this.lblTypeRoom.AutoSize = true;
-            this.lblTypeRoom.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypeRoom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTypeRoom.Location = new System.Drawing.Point(351, 52);
-            this.lblTypeRoom.Name = "lblTypeRoom";
-            this.lblTypeRoom.Size = new System.Drawing.Size(274, 24);
-            this.lblTypeRoom.TabIndex = 16;
-            this.lblTypeRoom.Text = "Room Type: Single Room";
+            this.lblRoomID.AutoSize = true;
+            this.lblRoomID.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRoomID.Location = new System.Drawing.Point(351, 52);
+            this.lblRoomID.Name = "lblRoomID";
+            this.lblRoomID.Size = new System.Drawing.Size(274, 24);
+            this.lblRoomID.TabIndex = 16;
+            this.lblRoomID.Text = "Room Type: Single Room";
             // 
             // dtpCheckIn
             // 
@@ -272,12 +268,39 @@
             this.btnSubmitSingle.Text = "Submit";
             this.btnSubmitSingle.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(464, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "label1";
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(15, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(97, 37);
+            this.btnBack.TabIndex = 29;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmSingleViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(903, 508);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSubmitSingle);
             this.Controls.Add(this.lblAmenities);
             this.Controls.Add(this.pnlAmenities);
@@ -287,14 +310,13 @@
             this.Controls.Add(this.lblCheckIn);
             this.Controls.Add(this.dtpCheckOut);
             this.Controls.Add(this.dtpCheckIn);
-            this.Controls.Add(this.lblTypeRoom);
-            this.Controls.Add(this.lblPriceRoom);
+            this.Controls.Add(this.lblRoomID);
+            this.Controls.Add(this.lblRoomPrice);
             this.Controls.Add(this.lblRoomDetails);
             this.Controls.Add(this.lblRoomName);
             this.Controls.Add(this.txtGuestName);
             this.Controls.Add(this.txtDaysOfStay);
             this.Controls.Add(this.txtGuestNo);
-            this.Controls.Add(this.txtRoomNo);
             this.Controls.Add(this.lblGuestName);
             this.Controls.Add(this.lblDaysOfStay);
             this.Controls.Add(this.lblGuestNo);
@@ -315,14 +337,13 @@
         private System.Windows.Forms.Label lblGuestNo;
         private System.Windows.Forms.Label lblDaysOfStay;
         private System.Windows.Forms.Label lblGuestName;
-        private System.Windows.Forms.TextBox txtRoomNo;
         private System.Windows.Forms.TextBox txtGuestNo;
         private System.Windows.Forms.TextBox txtDaysOfStay;
         private System.Windows.Forms.TextBox txtGuestName;
         private System.Windows.Forms.Label lblRoomName;
         private System.Windows.Forms.Label lblRoomDetails;
-        private System.Windows.Forms.Label lblPriceRoom;
-        private System.Windows.Forms.Label lblTypeRoom;
+        private System.Windows.Forms.Label lblRoomPrice;
+        private System.Windows.Forms.Label lblRoomID;
         private System.Windows.Forms.DateTimePicker dtpCheckIn;
         private System.Windows.Forms.DateTimePicker dtpCheckOut;
         private System.Windows.Forms.Label lblCheckIn;
@@ -332,5 +353,7 @@
         private System.Windows.Forms.Panel pnlAmenities;
         private System.Windows.Forms.Label lblAmenities;
         private System.Windows.Forms.Button btnSubmitSingle;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBack;
     }
 }
