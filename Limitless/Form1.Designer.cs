@@ -65,6 +65,7 @@
             // btnAddItem
             // 
             this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddItem.ForeColor = System.Drawing.Color.White;
             this.btnAddItem.Location = new System.Drawing.Point(384, 3);
@@ -73,6 +74,7 @@
             this.btnAddItem.TabIndex = 5;
             this.btnAddItem.Text = "Add item";
             this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // flPanel
             // 
@@ -116,7 +118,6 @@
             this.pbFormLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFormLogo.TabIndex = 2;
             this.pbFormLogo.TabStop = false;
-            this.pbFormLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmFrontPage
             // 
