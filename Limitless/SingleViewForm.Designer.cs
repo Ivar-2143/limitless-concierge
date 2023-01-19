@@ -133,6 +133,7 @@
             this.txtNights.Name = "txtNights";
             this.txtNights.Size = new System.Drawing.Size(96, 26);
             this.txtNights.TabIndex = 9;
+            this.txtNights.TextChanged += new System.EventHandler(this.txtNights_TextChanged);
             // 
             // txtGuestName
             // 
@@ -363,9 +364,9 @@
             this.label3.Location = new System.Drawing.Point(358, 76);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 22);
+            this.label3.Size = new System.Drawing.Size(50, 22);
             this.label3.TabIndex = 36;
-            this.label3.Text = "s";
+            this.label3.Text = "ID: ";
             // 
             // frmSingleViewForm
             // 
