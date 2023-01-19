@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +19,24 @@ namespace Limitless
         private frmFrontPage _prevForm;
         private frmAmenities _amenitiesForm;
         private List<Amenity> _selectedAmenities;
-
-
-        public frmSingleViewForm(Room room, frmFrontPage form)
+        private DateTime _checkIn, _checkOut;
+        private SqlConnection _db;
+        private Room _room;
+        private List<Booking> _bookings = new List<Booking>();
+        public frmSingleViewForm(Room room, frmFrontPage form,SqlConnection db)
         {
+            _room = room;
+            _db = db;
             _prevForm = form;
             InitializeComponent();
+
+            dtCheckIn.Value = DateTime.Now;
+            dtCheckOut.Value = DateTime.Now;
+            dtCheckIn.Format = DateTimePickerFormat.Custom;
+            dtCheckIn.CustomFormat = "MM/dd/yyyy hh:mm";
+            dtCheckOut.Format = DateTimePickerFormat.Custom;
+            dtCheckOut.CustomFormat = "MM/dd/yyyy hh:mm";
+
 
             lblBedCap.Text = Convert.ToString(room.BedCapacity);
             lblRoomName.Text = room.RoomName;
@@ -38,22 +52,118 @@ namespace Limitless
             _prevForm.Visible = true;
         }
 
-
-        private void lblTotalPrice_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEditAmenities_Click(object sender, EventArgs e)
         {
             _amenitiesForm  = new frmAmenities();
             _amenitiesForm.ShowDialog();
 
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            _checkIn = dtCheckIn.Value;
+            _checkOut = dtCheckOut.Value;
+            Console.WriteLine(_checkIn.ToString());
+            Console.WriteLine(_checkOut.ToString());
+            Console.WriteLine(DateTime.Today.ToString());
+
+            try
+            {
+                loadBookingDates();
+                if (_checkIn < DateTime.Now)
+                {
+                    throw new BookingDateException("Date is earlier than today!");
+                }
+                if (_checkOut < _checkIn)
+                {
+                    throw new BookingDateException("Check Out date is earlier than Check In!");
+                }
+                Console.WriteLine(_bookings.Count);
+                if (_bookings != null && _bookings.Count > 0)
+                {
+                    EvaluateDate(_checkIn,_checkOut);
+                }
+
+                //When there are no error or conflicts checked RUN this code
+                ConfirmBooking();
+                MessageBox.Show("Successfully Added Booking!", "MESSAGE");
+
+
+            }
+            catch (BookingDateException bde)
+            {
+                MessageBox.Show(bde.Message, "ERROR MESSAGE!");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR MESSAGE!");
+            }
+
+            
+           
+        }
+        
+
+        private void EvaluateDate(DateTime dateIn, DateTime dateOut)
+        {
+            foreach (Booking booking in _bookings)
+            {
+                if (dateIn > booking.CheckIn && dateIn < booking.CheckOut || dateOut > booking.CheckIn && dateOut < booking.CheckOut)
+                {
+                    throw new BookingDateException($"There is an existing BOOKING in the Date Range [ {booking.CheckIn} - {booking.CheckOut} ]!");
+                }
+                if (booking.CheckOut > dateIn && booking.CheckOut < dateOut)
+                {
+                    throw new BookingDateException($"There is an existing BOOKING in the Date Range [ {booking.CheckIn} - {booking.CheckOut} ]!");
+                }
+            }
+        }
+
+
+        private void loadBookingDates()
+        {
+            _db.Open();
+            SqlCommand cmd = _db.CreateCommand();
+            cmd.CommandText = $"SELECT * FROM Bookings WHERE Room = {_room.RoomNum}";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    string id = reader.GetString(0);
+                    int guests = reader.GetInt32(1);
+                    int roomNum = reader.GetInt32(2);
+                    int numberOfNights = reader.GetInt32(3);
+                    DateTime dateIn = DateTime.Parse(reader.GetString(4));
+                    DateTime dateOut = DateTime.Parse(reader.GetString(5));
+                    string name = reader.GetString(6); 
+                   
+                    Console.WriteLine($"ID: {id}\n" +
+                        $"Room Num: {roomNum}\n" +
+                        $"Guests: {guests}\n" +
+                        $"Nights: {numberOfNights}\n" +
+                        $"Date-in: {dateIn}\n" +
+                        $"Date-out: {dateOut}\n");
+                    _bookings.Add(new Booking(id,guests,roomNum,numberOfNights,dateIn,dateOut,name));
+                }
+            }
+            _db.Close();
+        }
+        private void ConfirmBooking()
+        {
+            string id = $"{_room.RoomNum}-{_checkIn.ToString("MM-dd")}-{_checkOut.ToString("MM-dd-yyy")}";
+
+            _db.Open();
+            SqlCommand cmd = _db.CreateCommand();
+            cmd.CommandText = "INSERT INTO Bookings VALUES ('"
+                + id
+                + "','" + Convert.ToInt32(txtGuestNo.Text)
+                + "','" + _room.RoomNum
+                + "','" + Convert.ToInt32(txtDaysOfStay.Text)
+                + "','" + _checkIn.ToString()
+                + "','" + _checkOut.ToString()
+                + "','" + txtGuestName.Text + "')";
+            cmd.ExecuteNonQuery();
+            _db.Close();
         }
     }
 }

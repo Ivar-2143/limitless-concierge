@@ -67,13 +67,15 @@
     <Compile Include="Amenities.Designer.cs">
       <DependentUpon>Amenities.cs</DependentUpon>
     </Compile>
-    <Compile Include="Booking.cs">
+    <Compile Include="BookingView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Booking.Designer.cs">
-      <DependentUpon>Booking.cs</DependentUpon>
+    <Compile Include="BookingView.Designer.cs">
+      <DependentUpon>BookingView.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Amenity.cs" />
+    <Compile Include="Classes\Booking.cs" />
+    <Compile Include="Classes\BookingDateException.cs" />
     <Compile Include="Components\AmenityComponent.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -104,8 +106,8 @@
     <EmbeddedResource Include="Amenities.resx">
       <DependentUpon>Amenities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Booking.resx">
-      <DependentUpon>Booking.cs</DependentUpon>
+    <EmbeddedResource Include="BookingView.resx">
+      <DependentUpon>BookingView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

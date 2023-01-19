@@ -111,7 +111,7 @@ namespace Limitless
         }
         private void openBooking_Click(object sender, EventArgs e)
         {
-            frmSingleViewForm roomView = new frmSingleViewForm(_room,_ownerForm);
+            frmSingleViewForm roomView = new frmSingleViewForm(_room,_ownerForm,_db);
             roomView.Show();
             _ownerForm.Visible = false;
         }
