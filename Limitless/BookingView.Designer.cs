@@ -82,6 +82,7 @@
             this.dgbBookingData.Name = "dgbBookingData";
             this.dgbBookingData.Size = new System.Drawing.Size(757, 288);
             this.dgbBookingData.TabIndex = 0;
+            this.dgbBookingData.SelectionChanged += new System.EventHandler(this.dgbBookingData_SelectionChanged);
             // 
             // lblBookingName
             // 

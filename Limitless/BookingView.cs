@@ -42,11 +42,19 @@ namespace Limitless
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            _db.Open();
-            SqlCommand cmd = _db.CreateCommand();
-            cmd.CommandText = "Delete FROM Bookings WHERE Id";
-            cmd.ExecuteNonQuery();
-            _db.Close();
+
+
+
+            //_db.Open();
+            //SqlCommand cmd = _db.CreateCommand();
+            //cmd.CommandText = "Delete FROM Bookings WHERE Id";
+            //cmd.ExecuteNonQuery();
+            //_db.Close();
+        }
+
+        private void dgbBookingData_SelectionChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("SELECTED: " + dgbBookingData.CurrentCell.RowIndex);
         }
     }
 }
