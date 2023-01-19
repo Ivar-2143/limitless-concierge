@@ -23,6 +23,7 @@ namespace Limitless
         private SqlConnection _db;
         private Room _room;
         private List<Booking> _bookings = new List<Booking>();
+        public string DATE_FORMAT = "MM-dd-yyyy hh:mm tt";
         public frmSingleViewForm(Room room, frmFrontPage form,SqlConnection db)
         {
             _room = room;
@@ -31,11 +32,11 @@ namespace Limitless
             InitializeComponent();
 
             dtCheckIn.Value = DateTime.Now;
-            dtCheckOut.Value = DateTime.Now;
+            dtCheckOut.Value = DateTime.Now.AddDays(1);
             dtCheckIn.Format = DateTimePickerFormat.Custom;
-            dtCheckIn.CustomFormat = "MM/dd/yyyy hh:mm";
+            dtCheckIn.CustomFormat = DATE_FORMAT;
             dtCheckOut.Format = DateTimePickerFormat.Custom;
-            dtCheckOut.CustomFormat = "MM/dd/yyyy hh:mm";
+            dtCheckOut.CustomFormat = DATE_FORMAT;
 
 
             lblBedCap.Text = Convert.ToString(room.BedCapacity);
@@ -63,8 +64,8 @@ namespace Limitless
         {
             _checkIn = dtCheckIn.Value;
             _checkOut = dtCheckOut.Value;
-            Console.WriteLine(_checkIn.ToString());
-            Console.WriteLine(_checkOut.ToString());
+            Console.WriteLine(_checkIn.ToString(DATE_FORMAT));
+            Console.WriteLine(_checkOut.ToString(DATE_FORMAT));
             Console.WriteLine(DateTime.Today.ToString());
 
             try
@@ -141,13 +142,34 @@ namespace Limitless
                         $"Room Num: {roomNum}\n" +
                         $"Guests: {guests}\n" +
                         $"Nights: {numberOfNights}\n" +
-                        $"Date-in: {dateIn}\n" +
-                        $"Date-out: {dateOut}\n");
+                        $"Date-in: {dateIn.Month}\n" +
+                        $"Date-out: {dateOut.Day}\n");
                     _bookings.Add(new Booking(id,guests,roomNum,numberOfNights,dateIn,dateOut,name));
                 }
             }
             _db.Close();
         }
+
+        private void dtCheckIn_ValueChanged(object sender, EventArgs e)
+        {
+            if(dtCheckOut.Value < dtCheckIn.Value || dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalHours <= 23)
+            {
+                dtCheckOut.Value = dtCheckIn.Value.AddHours(23);
+            }
+
+            txtNights.Text = Convert.ToString(dtCheckOut.Value.Day - dtCheckIn.Value.Day);
+        }
+
+        private void dtCheckOut_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtCheckOut.Value < dtCheckIn.Value || dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalHours <= 23)
+            {
+                dtCheckOut.Value = dtCheckIn.Value.AddHours(23);
+            }
+
+            txtNights.Text = Convert.ToString(dtCheckOut.Value.Day - dtCheckIn.Value.Day);
+        }
+
         private void ConfirmBooking()
         {
             string id = $"{_room.RoomNum}-{_checkIn.ToString("MM-dd")}-{_checkOut.ToString("MM-dd-yyy")}";
@@ -158,8 +180,8 @@ namespace Limitless
                 + id
                 + "','" + Convert.ToInt32(txtGuestNo.Text)
                 + "','" + _room.RoomNum
-                + "','" + Convert.ToInt32(txtDaysOfStay.Text)
-                + "','" + _checkIn.ToString()
+                + "','" + Convert.ToInt32(txtNights.Text)
+                + "','" + _checkIn.ToString("MM-dd-yyyy hh:mm tt")
                 + "','" + _checkOut.ToString()
                 + "','" + txtGuestName.Text + "')";
             cmd.ExecuteNonQuery();

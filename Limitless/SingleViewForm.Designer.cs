@@ -35,7 +35,7 @@
             this.lblDaysOfStay = new System.Windows.Forms.Label();
             this.lblGuestName = new System.Windows.Forms.Label();
             this.txtGuestNo = new System.Windows.Forms.TextBox();
-            this.txtDaysOfStay = new System.Windows.Forms.TextBox();
+            this.txtNights = new System.Windows.Forms.TextBox();
             this.txtGuestName = new System.Windows.Forms.TextBox();
             this.lblRoomName = new System.Windows.Forms.Label();
             this.lblRoomDetails = new System.Windows.Forms.Label();
@@ -98,12 +98,12 @@
             this.lblDaysOfStay.AutoSize = true;
             this.lblDaysOfStay.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDaysOfStay.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDaysOfStay.Location = new System.Drawing.Point(621, 105);
+            this.lblDaysOfStay.Location = new System.Drawing.Point(570, 108);
             this.lblDaysOfStay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDaysOfStay.Name = "lblDaysOfStay";
-            this.lblDaysOfStay.Size = new System.Drawing.Size(166, 24);
+            this.lblDaysOfStay.Size = new System.Drawing.Size(214, 24);
             this.lblDaysOfStay.TabIndex = 5;
-            this.lblDaysOfStay.Text = "Days of Stay:";
+            this.lblDaysOfStay.Text = "Number of Nights:";
             // 
             // lblGuestName
             // 
@@ -125,14 +125,14 @@
             this.txtGuestNo.Size = new System.Drawing.Size(95, 26);
             this.txtGuestNo.TabIndex = 8;
             // 
-            // txtDaysOfStay
+            // txtNights
             // 
-            this.txtDaysOfStay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDaysOfStay.Location = new System.Drawing.Point(783, 105);
-            this.txtDaysOfStay.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDaysOfStay.Name = "txtDaysOfStay";
-            this.txtDaysOfStay.Size = new System.Drawing.Size(96, 26);
-            this.txtDaysOfStay.TabIndex = 9;
+            this.txtNights.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNights.Location = new System.Drawing.Point(783, 108);
+            this.txtNights.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNights.Name = "txtNights";
+            this.txtNights.Size = new System.Drawing.Size(96, 26);
+            this.txtNights.TabIndex = 9;
             // 
             // txtGuestName
             // 
@@ -199,6 +199,7 @@
             this.dtCheckIn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtCheckIn.Size = new System.Drawing.Size(305, 26);
             this.dtCheckIn.TabIndex = 19;
+            this.dtCheckIn.ValueChanged += new System.EventHandler(this.dtCheckIn_ValueChanged);
             // 
             // dtCheckOut
             // 
@@ -207,6 +208,7 @@
             this.dtCheckOut.Name = "dtCheckOut";
             this.dtCheckOut.Size = new System.Drawing.Size(305, 26);
             this.dtCheckOut.TabIndex = 20;
+            this.dtCheckOut.ValueChanged += new System.EventHandler(this.dtCheckOut_ValueChanged);
             // 
             // lblCheckIn
             // 
@@ -391,7 +393,7 @@
             this.Controls.Add(this.lblRoomDetails);
             this.Controls.Add(this.lblRoomName);
             this.Controls.Add(this.txtGuestName);
-            this.Controls.Add(this.txtDaysOfStay);
+            this.Controls.Add(this.txtNights);
             this.Controls.Add(this.txtGuestNo);
             this.Controls.Add(this.lblGuestName);
             this.Controls.Add(this.lblDaysOfStay);
@@ -415,7 +417,7 @@
         private System.Windows.Forms.Label lblDaysOfStay;
         private System.Windows.Forms.Label lblGuestName;
         private System.Windows.Forms.TextBox txtGuestNo;
-        private System.Windows.Forms.TextBox txtDaysOfStay;
+        private System.Windows.Forms.TextBox txtNights;
         private System.Windows.Forms.TextBox txtGuestName;
         private System.Windows.Forms.Label lblRoomName;
         private System.Windows.Forms.Label lblRoomDetails;
