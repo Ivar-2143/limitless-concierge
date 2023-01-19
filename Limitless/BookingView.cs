@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,17 @@ namespace Limitless
 {
     public partial class BookingView : Form
     {
-        public BookingView()
+        private frmFrontPage _ownerForm;
+        private SqlConnection _db;
+
+        public BookingView(frmFrontPage ownerForm, SqlConnection db)
         {
+            _ownerForm= ownerForm;
+            _db= db;
             InitializeComponent();
         }
 
        
-        }
     }
+}
 

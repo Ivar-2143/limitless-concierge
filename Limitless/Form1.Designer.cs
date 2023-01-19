@@ -108,6 +108,7 @@
             this.btnBookingView.TabIndex = 2;
             this.btnBookingView.Text = "Booking View";
             this.btnBookingView.UseVisualStyleBackColor = false;
+            this.btnBookingView.Click += new System.EventHandler(this.btnBookingView_Click);
             // 
             // pbFormLogo
             // 

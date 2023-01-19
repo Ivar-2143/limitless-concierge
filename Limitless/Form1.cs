@@ -53,7 +53,12 @@ namespace Limitless
                 flPanel.Controls.Add(new RoomPreview(room, this, db));
             }
             flPanel.Refresh();
-        } 
+        }
+
+        private void btnBookingView_Click(object sender, EventArgs e)
+        {
+            BookingView bookingForm = new BookingView(this,db);
+        }
 
         private void loadData()
         {

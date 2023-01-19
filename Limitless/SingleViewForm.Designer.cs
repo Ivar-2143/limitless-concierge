@@ -56,6 +56,7 @@
             this.dgvAmenities = new System.Windows.Forms.DataGridView();
             this.lblBedCap = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.ofdImage = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPictureSingle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmenities)).BeginInit();
             this.SuspendLayout();
@@ -367,6 +368,10 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "ID: ";
             // 
+            // ofdImage
+            // 
+            this.ofdImage.FileName = "ofdImage";
+            // 
             // frmSingleViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,5 +443,6 @@
         private System.Windows.Forms.DataGridView dgvAmenities;
         private System.Windows.Forms.Label lblBedCap;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.OpenFileDialog ofdImage;
     }
 }
