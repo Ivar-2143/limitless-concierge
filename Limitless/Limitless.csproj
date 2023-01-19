@@ -97,6 +97,12 @@
     <Compile Include="SingleViewForm.Designer.cs">
       <DependentUpon>SingleViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ModifyAmenitiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModifyAmenitiesForm.Designer.cs">
+      <DependentUpon>ModifyAmenitiesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ModifyBookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="SingleViewForm.resx">
       <DependentUpon>SingleViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModifyAmenitiesForm.resx">
+      <DependentUpon>ModifyAmenitiesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ModifyBookingForm.resx">
       <DependentUpon>ModifyBookingForm.cs</DependentUpon>

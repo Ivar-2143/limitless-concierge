@@ -307,7 +307,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(630, 368);
+            this.label2.Location = new System.Drawing.Point(721, 368);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 24);
             this.label2.TabIndex = 32;
@@ -318,7 +318,7 @@
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTotalPrice.Location = new System.Drawing.Point(651, 402);
+            this.lblTotalPrice.Location = new System.Drawing.Point(722, 412);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(40, 17);
             this.lblTotalPrice.TabIndex = 33;
@@ -332,7 +332,7 @@
             this.dgvAmenities.Name = "dgvAmenities";
             this.dgvAmenities.RowHeadersWidth = 51;
             this.dgvAmenities.RowTemplate.Height = 24;
-            this.dgvAmenities.Size = new System.Drawing.Size(275, 130);
+            this.dgvAmenities.Size = new System.Drawing.Size(366, 130);
             this.dgvAmenities.TabIndex = 34;
             // 
             // lblBedCap

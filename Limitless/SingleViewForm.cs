@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,9 +25,11 @@ namespace Limitless
         private SqlConnection _db;
         private Room _room;
         private List<Booking> _bookings = new List<Booking>();
+        private double _TotalAmenityPrice = 0;
         public string DATE_FORMAT = "MM-dd-yyyy hh:mm tt";
         public frmSingleViewForm(Room room, frmFrontPage form,SqlConnection db)
         {
+            _selectedAmenities = new List<Amenity>();
             _room = room;
             _db = db;
             _prevForm = form;
@@ -57,7 +60,16 @@ namespace Limitless
 
         private void btnEditAmenities_Click(object sender, EventArgs e)
         {
-            _amenitiesForm  = new frmAmenities();
+
+            if(_selectedAmenities.Count > 0 && _selectedAmenities != null)
+            {
+                _amenitiesForm = new frmAmenities(this,_selectedAmenities);
+            }
+            else
+            {
+
+                _amenitiesForm  = new frmAmenities(this);
+            }
             _amenitiesForm.ShowDialog();
 
         }
@@ -160,7 +172,7 @@ namespace Limitless
             }
 
             lblNights.Text = Convert.ToString(Convert.ToInt32(dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays));
-            lblTotalPrice.Text = $"Php {Convert.ToDouble(lblNights.Text) * _room.Price}";
+            lblTotalPrice.Text = $"Php {(Convert.ToDouble(lblNights.Text) * _room.Price) + _TotalAmenityPrice}";
         }
 
         private void dtCheckOut_ValueChanged(object sender, EventArgs e)
@@ -172,7 +184,7 @@ namespace Limitless
 
             //lblNights.Text = Convert.ToString(dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays);
             lblNights.Text = Convert.ToString(Convert.ToInt32(dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays));
-            lblTotalPrice.Text = $"Php {Convert.ToDouble(lblNights.Text) * _room.Price}";
+            lblTotalPrice.Text = $"Php {(Convert.ToDouble(lblNights.Text) * _room.Price) + _TotalAmenityPrice}";
 
         }
 
@@ -180,6 +192,17 @@ namespace Limitless
         private void ConfirmBooking()
         {
             string id = $"{_room.RoomNum}-{_checkIn.ToString("MM-dd")}-{_checkOut.ToString("MM-dd-yyy")}";
+            string listOfAmenities = "";
+            if(_selectedAmenities.Count > 0)
+            {
+                foreach (Amenity amenity in _selectedAmenities)
+                {
+                    listOfAmenities = listOfAmenities + amenity.Name + ",";
+                }
+            }
+
+
+
 
             _db.Open();
             SqlCommand cmd = _db.CreateCommand();
@@ -190,9 +213,22 @@ namespace Limitless
                 + "','" + Convert.ToInt32(lblNights.Text)
                 + "','" + _checkIn.ToString("MM-dd-yyyy hh:mm tt")
                 + "','" + _checkOut.ToString()
-                + "','" + txtGuestName.Text + "')";
+                + "','" + txtGuestName.Text
+                + "','" + listOfAmenities + "')";
             cmd.ExecuteNonQuery();
             _db.Close();
+        }
+
+        public void setTotalAmenityPrice(double price)
+        {
+            _TotalAmenityPrice = price;
+            lblTotalPrice.Text = $"Php {(Convert.ToDouble(lblNights.Text) * _room.Price) + _TotalAmenityPrice}";
+        }
+
+        public void loadGridView(List<Amenity> amenities)
+        {
+            _selectedAmenities = amenities;
+            dgvAmenities.DataSource = _selectedAmenities.ToList();
         }
     }
 }

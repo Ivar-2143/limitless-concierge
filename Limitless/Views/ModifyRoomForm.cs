@@ -26,7 +26,7 @@ namespace Limitless.Views
             _db = db;
             _ownerForm = ownerForm;
             _roomNumber = generatedNumber; 
-
+            
             InitializeComponent();
             Console.WriteLine("Image" + ptbRoomImage.Image);
             lblRoomNum.Text = generatedNumber.ToString();
@@ -120,6 +120,7 @@ namespace Limitless.Views
                 + "','" + Convert.ToDecimal(txtPrice.Text)
                 + "','"+""+"')";
             cmd.ExecuteNonQuery();
+            
         }
     }
 }
