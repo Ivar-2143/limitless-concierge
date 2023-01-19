@@ -45,9 +45,6 @@ namespace Limitless.Views
             txtBedCap.Text = room.BedCapacity.ToString();
             ptbRoomImage.Image = Image.FromFile(room.Image);
 
-            
-
-
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
