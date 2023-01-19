@@ -22,8 +22,32 @@ namespace Limitless
             _db= db;
             InitializeComponent();
         }
+        private void BookingView_Load(object sender, EventArgs e)
+        {
+            LoadGridView();
+        }
+        private void LoadGridView()
+        {
+            _db.Open();
+            SqlCommand cmd = _db.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Bookings";
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dgbBookingData.DataSource = dt;
 
-       
+            _db.Close();
+        }
+         
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            _db.Open();
+            SqlCommand cmd = _db.CreateCommand();
+            cmd.CommandText = "Delete FROM Bookings WHERE Id";
+            cmd.ExecuteNonQuery();
+            _db.Close();
+        }
     }
 }
 

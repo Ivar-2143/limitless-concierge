@@ -58,6 +58,8 @@ namespace Limitless
         private void btnBookingView_Click(object sender, EventArgs e)
         {
             BookingView bookingForm = new BookingView(this,db);
+            bookingForm.Show();
+
         }
 
         private void loadData()
