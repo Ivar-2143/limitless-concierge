@@ -35,8 +35,8 @@ namespace Limitless
             _prevForm = form;
             InitializeComponent();
 
-            dtCheckIn.Value = DateTime.Now;
-            dtCheckOut.Value = DateTime.Now.AddDays(1);
+            dtCheckIn.Value = DateTime.Now.AddMinutes(30);
+            dtCheckOut.Value = dtCheckIn.Value.AddDays(1);
             dtCheckIn.Format = DateTimePickerFormat.Custom;
             dtCheckIn.CustomFormat = DATE_FORMAT;
             dtCheckOut.Format = DateTimePickerFormat.Custom;
