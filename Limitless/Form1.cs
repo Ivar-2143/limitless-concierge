@@ -75,19 +75,17 @@ namespace Limitless
                     int roomNum = reader.GetInt32(0);
                     string roomName = reader.GetString(1);
                     int bedCapacity = reader.GetInt32(2);
-                    Console.WriteLine(path);
+                    //Console.WriteLine(path);
                     string image = $"{path}\\Limitless\\Graphics\\{reader.GetString(3)}";
                     double price = Convert.ToDouble(reader.GetDecimal(4));
                     string bookedDates = reader.GetString(5);
-                    Console.WriteLine($"Room No.: {roomNum}\n" +
-                        $"Room Name: {roomName}\n" +
-                        $"Capacity: {bedCapacity}\n"+
-                        $"Image: {image}\n" +
-                        $"Price: {price}\n" +
-                        $"Booked Dates: {bookedDates}\n");
-                    //telRooms.Append(new Room(roomNum,roomName,roomType,price,bedCapacity));
+                    //Console.WriteLine($"Room No.: {roomNum}\n" +
+                    //    $"Room Name: {roomName}\n" +
+                    //    $"Capacity: {bedCapacity}\n"+
+                    //    $"Image: {image}\n" +
+                    //    $"Price: {price}\n" +
+                    //    $"Booked Dates: {bookedDates}\n");
                     hotelRooms.Add(new Room(roomNum, roomName, bedCapacity, image, price, bookedDates));
-                    //telRooms.Append<Room>(new Room(roomNum, roomName, roomType, price, bedCapacity));
                 }
 
             }
