@@ -104,6 +104,7 @@
             this.Controls.Add(this.pnlBookingPanel);
             this.Name = "BookingView";
             this.Text = "Booking";
+            this.Load += new System.EventHandler(this.BookingView_Load);
             this.pnlBookingPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgbBookingData)).EndInit();
             this.ResumeLayout(false);

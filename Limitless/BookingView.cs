@@ -55,15 +55,35 @@ namespace Limitless
 
             _db.Close();
         }
+        private void BookingView_Load(object sender, EventArgs e)
+        {
+            LoadGridView();
+        }
+        private void LoadGridView()
+        {
+            _db.Open();
+            SqlCommand cmd = _db.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Bookings";
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dgbBookingData.DataSource = dt;
 
+<<<<<<< HEAD
         public void RefreshGridView()
         {
             LoadGridView();
         }
+=======
+            _db.Close();
+        }
+         
+>>>>>>> master
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
+<<<<<<< HEAD
             _db.Open();
             SqlCommand cmd = _db.CreateCommand();
             cmd.CommandText = "DELETE FROM Bookings WHERE Id = '" + dgbBookingData[0, _selectedRow].Value + "'";
@@ -72,10 +92,20 @@ namespace Limitless
             
             MessageBox.Show("Successfully Deleted Data!", "MESSAGE");
             LoadGridView();
+=======
+
+
+            //_db.Open();
+            //SqlCommand cmd = _db.CreateCommand();
+            //cmd.CommandText = "Delete FROM Bookings WHERE Id";
+            //cmd.ExecuteNonQuery();
+            //_db.Close();
+>>>>>>> master
         }
 
         private void dgbBookingData_SelectionChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             _selectedRow = dgbBookingData.CurrentCell.RowIndex;
             Console.WriteLine("SELECTED: " + dgbBookingData[0,_selectedRow].Value.ToString());
         }
@@ -102,6 +132,9 @@ namespace Limitless
                 bookingForm.ShowDialog();
             }
             
+=======
+            Console.WriteLine("SELECTED: " + dgbBookingData.CurrentCell.RowIndex);
+>>>>>>> master
         }
     }
 }
