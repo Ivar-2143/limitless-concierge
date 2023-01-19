@@ -60,6 +60,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnBookingUpdate
             // 
@@ -92,15 +93,16 @@
             this.lblBookingName.TabIndex = 1;
             this.lblBookingName.Text = "BOOKING";
             // 
-            // Booking
+            // BookingView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblBookingName);
             this.Controls.Add(this.pnlBookingPanel);
-            this.Name = "Booking";
+            this.Name = "BookingView";
             this.Text = "Booking";
+            this.Load += new System.EventHandler(this.BookingView_Load);
             this.pnlBookingPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgbBookingData)).EndInit();
             this.ResumeLayout(false);
