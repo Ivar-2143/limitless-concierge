@@ -170,6 +170,19 @@ namespace Limitless
             txtNights.Text = Convert.ToString(dtCheckOut.Value.Day - dtCheckIn.Value.Day);
         }
 
+        private void txtNights_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNights.Text != null && txtNights.Text != "")
+            {
+                if (dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays < Convert.ToInt32(txtNights.Text) || dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays > Convert.ToInt32(txtNights.Text))
+                {
+                    dtCheckOut.Value = dtCheckIn.Value.AddDays(Convert.ToInt32(txtNights.Text));
+                }
+                lblTotalPrice.Text = $"Php {Convert.ToDouble(txtNights.Text) * _room.Price}";
+            }
+            
+        }
+
         private void ConfirmBooking()
         {
             string id = $"{_room.RoomNum}-{_checkIn.ToString("MM-dd")}-{_checkOut.ToString("MM-dd-yyy")}";

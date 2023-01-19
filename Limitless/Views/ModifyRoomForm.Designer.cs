@@ -36,7 +36,7 @@
             this.txtRoomName = new System.Windows.Forms.TextBox();
             this.txtBedCap = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ptbRoomImage = new System.Windows.Forms.PictureBox();
             this.lblImage = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
@@ -118,9 +118,9 @@
             this.txtPrice.Size = new System.Drawing.Size(134, 26);
             this.txtPrice.TabIndex = 8;
             // 
-            // openFileDialog1
+            // openFileDialog
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog.FileName = "openFileDialog";
             // 
             // ptbRoomImage
             // 
@@ -198,7 +198,7 @@
         private System.Windows.Forms.TextBox txtRoomName;
         private System.Windows.Forms.TextBox txtBedCap;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.PictureBox ptbRoomImage;
         private System.Windows.Forms.Label lblImage;
         private System.Windows.Forms.Button btnBrowse;
