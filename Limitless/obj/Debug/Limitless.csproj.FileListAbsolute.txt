@@ -57,5 +57,10 @@ C:\Users\acer\Source\Repos\limitless-concierge\Limitless\obj\Debug\Limitless.exe
 C:\Users\acer\Source\Repos\limitless-concierge\Limitless\obj\Debug\Limitless.pdb
 C:\Users\Adi\Documents\Visual Studio 2022\Projects\limitless-concierge\Limitless\obj\Debug\Limitless.Views.ModifyRoomForm.resources
 C:\Users\Adi\Documents\Visual Studio 2022\Projects\limitless-concierge\Limitless\obj\Debug\Limitless.BookingView.resources
+<<<<<<< HEAD
+C:\Users\Adi\Documents\Visual Studio 2022\Projects\limitless-concierge\Limitless\obj\Debug\Limitless.Views.ModifyBookingForm.resources
+C:\Users\Adi\Documents\Visual Studio 2022\Projects\limitless-concierge\Limitless\obj\Debug\Limitless.Views.ModifyAmenitiesForm.resources
+=======
 C:\Users\acer\Source\Repos\limitless-concierge\Limitless\obj\Debug\Limitless.BookingView.resources
 C:\Users\acer\Source\Repos\limitless-concierge\Limitless\obj\Debug\Limitless.Views.ModifyRoomForm.resources
+>>>>>>> master

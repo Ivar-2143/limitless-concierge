@@ -14,8 +14,11 @@ namespace Limitless.Components
     {
         private Label _lblPrice;
         private CheckBox _chkAmenity;
-
-        public AmenityComponent(Amenity amenity) {
+        private Amenity _amenity;
+        private frmAmenities _parentForm;
+        public AmenityComponent(frmAmenities parentForm,Amenity amenity,Boolean isChecked) {
+            _parentForm = parentForm;
+            _amenity = amenity;
             Width = 378;
             Height = 40;
             BackColor = Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
@@ -36,12 +39,36 @@ namespace Limitless.Components
             _chkAmenity.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             _chkAmenity.ForeColor = SystemColors.ControlLightLight;
             _chkAmenity.Location = new Point(3, 7);
-
+            _chkAmenity.Checked = isChecked;
+            _chkAmenity.CheckedChanged += new EventHandler(Check_Changed);
 
             Controls.Add(_lblPrice);
             Controls.Add(_chkAmenity);
+        }
 
+        private void Check_Changed(object sender, EventArgs e)
+        {
 
+            Console.WriteLine(_chkAmenity.Checked);
+            if (_chkAmenity.Checked)
+            {
+                _parentForm.chosenAmenities.Add(_amenity);
+                _parentForm.setPrice();
+                Console.WriteLine(_parentForm.chosenAmenities.Count);
+            }
+            else
+            {
+                for (int i = 0; i < _parentForm.chosenAmenities.Count; i++){
+                    if (_parentForm.chosenAmenities[i].Name == _amenity.Name)
+                    {
+                        _parentForm.chosenAmenities.RemoveAt(i);
+                        break;
+                    }
+                }
+                _parentForm.setPrice();
+                Console.WriteLine(_parentForm.chosenAmenities.Count);
+
+            }
         }
     }
 }

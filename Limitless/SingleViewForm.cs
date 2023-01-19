@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,22 +18,25 @@ namespace Limitless
     public partial class frmSingleViewForm : Form
     {
         private frmFrontPage _prevForm;
+        private BookingView _parentForm;
         private frmAmenities _amenitiesForm;
         private List<Amenity> _selectedAmenities;
         private DateTime _checkIn, _checkOut;
         private SqlConnection _db;
         private Room _room;
         private List<Booking> _bookings = new List<Booking>();
+        private double _TotalAmenityPrice = 0;
         public string DATE_FORMAT = "MM-dd-yyyy hh:mm tt";
         public frmSingleViewForm(Room room, frmFrontPage form,SqlConnection db)
         {
+            _selectedAmenities = new List<Amenity>();
             _room = room;
             _db = db;
             _prevForm = form;
             InitializeComponent();
 
-            dtCheckIn.Value = DateTime.Now;
-            dtCheckOut.Value = DateTime.Now.AddDays(1);
+            dtCheckIn.Value = DateTime.Now.AddMinutes(30);
+            dtCheckOut.Value = dtCheckIn.Value.AddDays(1);
             dtCheckIn.Format = DateTimePickerFormat.Custom;
             dtCheckIn.CustomFormat = DATE_FORMAT;
             dtCheckOut.Format = DateTimePickerFormat.Custom;
@@ -46,6 +50,7 @@ namespace Limitless
             ptbPictureSingle.Image = Image.FromFile(room.Image);
             lblRoomNum.Text = Convert.ToString(room.RoomNum);
         }
+        
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -55,7 +60,16 @@ namespace Limitless
 
         private void btnEditAmenities_Click(object sender, EventArgs e)
         {
-            _amenitiesForm  = new frmAmenities();
+
+            if(_selectedAmenities.Count > 0 && _selectedAmenities != null)
+            {
+                _amenitiesForm = new frmAmenities(this,_selectedAmenities);
+            }
+            else
+            {
+
+                _amenitiesForm  = new frmAmenities(this);
+            }
             _amenitiesForm.ShowDialog();
 
         }
@@ -88,8 +102,8 @@ namespace Limitless
                 //When there are no error or conflicts checked RUN this code
                 ConfirmBooking();
                 MessageBox.Show("Successfully Added Booking!", "MESSAGE");
-
-
+                Close();
+                _prevForm.Visible = true;
             }
             catch (BookingDateException bde)
             {
@@ -154,38 +168,41 @@ namespace Limitless
         {
             if(dtCheckOut.Value < dtCheckIn.Value || dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalHours <= 23)
             {
-                dtCheckOut.Value = dtCheckIn.Value.AddHours(23);
+                dtCheckOut.Value = dtCheckIn.Value.AddHours(24);
             }
 
-            txtNights.Text = Convert.ToString(dtCheckOut.Value.Day - dtCheckIn.Value.Day);
+            lblNights.Text = Convert.ToString(Convert.ToInt32(dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays));
+            lblTotalPrice.Text = $"Php {(Convert.ToDouble(lblNights.Text) * _room.Price) + _TotalAmenityPrice}";
         }
 
         private void dtCheckOut_ValueChanged(object sender, EventArgs e)
         {
             if (dtCheckOut.Value < dtCheckIn.Value || dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalHours <= 23)
             {
-                dtCheckOut.Value = dtCheckIn.Value.AddHours(23);
+                dtCheckOut.Value = dtCheckIn.Value.AddHours(24);
             }
 
-            txtNights.Text = Convert.ToString(dtCheckOut.Value.Day - dtCheckIn.Value.Day);
+            //lblNights.Text = Convert.ToString(dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays);
+            lblNights.Text = Convert.ToString(Convert.ToInt32(dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays));
+            lblTotalPrice.Text = $"Php {(Convert.ToDouble(lblNights.Text) * _room.Price) + _TotalAmenityPrice}";
+
         }
 
-        private void txtNights_TextChanged(object sender, EventArgs e)
-        {
-            if (txtNights.Text != null && txtNights.Text != "")
-            {
-                if (dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays < Convert.ToInt32(txtNights.Text) || dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays > Convert.ToInt32(txtNights.Text))
-                {
-                    dtCheckOut.Value = dtCheckIn.Value.AddDays(Convert.ToInt32(txtNights.Text));
-                }
-                lblTotalPrice.Text = $"Php {Convert.ToDouble(txtNights.Text) * _room.Price}";
-            }
-            
-        }
 
         private void ConfirmBooking()
         {
             string id = $"{_room.RoomNum}-{_checkIn.ToString("MM-dd")}-{_checkOut.ToString("MM-dd-yyy")}";
+            string listOfAmenities = "";
+            if(_selectedAmenities.Count > 0)
+            {
+                foreach (Amenity amenity in _selectedAmenities)
+                {
+                    listOfAmenities = listOfAmenities + amenity.Name + ",";
+                }
+            }
+
+
+
 
             _db.Open();
             SqlCommand cmd = _db.CreateCommand();
@@ -193,12 +210,25 @@ namespace Limitless
                 + id
                 + "','" + Convert.ToInt32(txtGuestNo.Text)
                 + "','" + _room.RoomNum
-                + "','" + Convert.ToInt32(txtNights.Text)
+                + "','" + Convert.ToInt32(lblNights.Text)
                 + "','" + _checkIn.ToString("MM-dd-yyyy hh:mm tt")
                 + "','" + _checkOut.ToString()
-                + "','" + txtGuestName.Text + "')";
+                + "','" + txtGuestName.Text
+                + "','" + listOfAmenities + "')";
             cmd.ExecuteNonQuery();
             _db.Close();
+        }
+
+        public void setTotalAmenityPrice(double price)
+        {
+            _TotalAmenityPrice = price;
+            lblTotalPrice.Text = $"Php {(Convert.ToDouble(lblNights.Text) * _room.Price) + _TotalAmenityPrice}";
+        }
+
+        public void loadGridView(List<Amenity> amenities)
+        {
+            _selectedAmenities = amenities;
+            dgvAmenities.DataSource = _selectedAmenities.ToList();
         }
     }
 }

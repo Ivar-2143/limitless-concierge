@@ -74,6 +74,7 @@
             this.btnBookingUpdate.TabIndex = 1;
             this.btnBookingUpdate.Text = "Update";
             this.btnBookingUpdate.UseVisualStyleBackColor = false;
+            this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
             // 
             // dgbBookingData
             // 

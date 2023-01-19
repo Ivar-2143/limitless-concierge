@@ -30,21 +30,23 @@
         {
             this.lblAmenities = new System.Windows.Forms.Label();
             this.pnlServices = new System.Windows.Forms.Panel();
+            this.flPnlServices = new System.Windows.Forms.FlowLayoutPanel();
             this.lblConsumablePrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlHygiene = new System.Windows.Forms.Panel();
+            this.flPnlEssential = new System.Windows.Forms.FlowLayoutPanel();
             this.lblHygienePrice = new System.Windows.Forms.Label();
             this.lblEssential = new System.Windows.Forms.Label();
             this.pnlOthers = new System.Windows.Forms.Panel();
+            this.flPnlOthers = new System.Windows.Forms.FlowLayoutPanel();
             this.lblOthersPrice = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.pnlTotalPrice = new System.Windows.Forms.Panel();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
-            this.flPnlEssential = new System.Windows.Forms.FlowLayoutPanel();
-            this.flPnlServices = new System.Windows.Forms.FlowLayoutPanel();
-            this.flPnlOthers = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.pnlServices.SuspendLayout();
             this.pnlHygiene.SuspendLayout();
             this.pnlOthers.SuspendLayout();
@@ -72,6 +74,14 @@
             this.pnlServices.Name = "pnlServices";
             this.pnlServices.Size = new System.Drawing.Size(402, 288);
             this.pnlServices.TabIndex = 28;
+            // 
+            // flPnlServices
+            // 
+            this.flPnlServices.AutoScroll = true;
+            this.flPnlServices.Location = new System.Drawing.Point(0, 51);
+            this.flPnlServices.Name = "flPnlServices";
+            this.flPnlServices.Size = new System.Drawing.Size(402, 237);
+            this.flPnlServices.TabIndex = 33;
             // 
             // lblConsumablePrice
             // 
@@ -108,6 +118,14 @@
             this.pnlHygiene.Size = new System.Drawing.Size(402, 288);
             this.pnlHygiene.TabIndex = 29;
             // 
+            // flPnlEssential
+            // 
+            this.flPnlEssential.AutoScroll = true;
+            this.flPnlEssential.Location = new System.Drawing.Point(0, 51);
+            this.flPnlEssential.Name = "flPnlEssential";
+            this.flPnlEssential.Size = new System.Drawing.Size(402, 237);
+            this.flPnlEssential.TabIndex = 32;
+            // 
             // lblHygienePrice
             // 
             this.lblHygienePrice.AutoSize = true;
@@ -142,6 +160,14 @@
             this.pnlOthers.Size = new System.Drawing.Size(402, 288);
             this.pnlOthers.TabIndex = 30;
             // 
+            // flPnlOthers
+            // 
+            this.flPnlOthers.AutoScroll = true;
+            this.flPnlOthers.Location = new System.Drawing.Point(0, 58);
+            this.flPnlOthers.Name = "flPnlOthers";
+            this.flPnlOthers.Size = new System.Drawing.Size(402, 237);
+            this.flPnlOthers.TabIndex = 34;
+            // 
             // lblOthersPrice
             // 
             this.lblOthersPrice.AutoSize = true;
@@ -170,21 +196,35 @@
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnConfirm.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfirm.Location = new System.Drawing.Point(507, 528);
+            this.btnConfirm.Location = new System.Drawing.Point(613, 569);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(243, 88);
+            this.btnConfirm.Size = new System.Drawing.Size(206, 59);
             this.btnConfirm.TabIndex = 31;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // pnlTotalPrice
             // 
             this.pnlTotalPrice.BackColor = System.Drawing.Color.White;
+            this.pnlTotalPrice.Controls.Add(this.lblPrice);
             this.pnlTotalPrice.Controls.Add(this.lblTotalPrice);
-            this.pnlTotalPrice.Location = new System.Drawing.Point(459, 399);
+            this.pnlTotalPrice.Location = new System.Drawing.Point(430, 466);
             this.pnlTotalPrice.Name = "pnlTotalPrice";
-            this.pnlTotalPrice.Size = new System.Drawing.Size(327, 97);
+            this.pnlTotalPrice.Size = new System.Drawing.Size(393, 97);
             this.pnlTotalPrice.TabIndex = 32;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrice.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblPrice.Location = new System.Drawing.Point(3, 46);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(47, 34);
+            this.lblPrice.TabIndex = 30;
+            this.lblPrice.Text = "00";
             // 
             // lblTotalPrice
             // 
@@ -197,30 +237,6 @@
             this.lblTotalPrice.Size = new System.Drawing.Size(207, 34);
             this.lblTotalPrice.TabIndex = 29;
             this.lblTotalPrice.Text = "Total Price:";
-            // 
-            // flPnlEssential
-            // 
-            this.flPnlEssential.AutoScroll = true;
-            this.flPnlEssential.Location = new System.Drawing.Point(0, 51);
-            this.flPnlEssential.Name = "flPnlEssential";
-            this.flPnlEssential.Size = new System.Drawing.Size(402, 237);
-            this.flPnlEssential.TabIndex = 32;
-            // 
-            // flPnlServices
-            // 
-            this.flPnlServices.AutoScroll = true;
-            this.flPnlServices.Location = new System.Drawing.Point(0, 51);
-            this.flPnlServices.Name = "flPnlServices";
-            this.flPnlServices.Size = new System.Drawing.Size(402, 237);
-            this.flPnlServices.TabIndex = 33;
-            // 
-            // flPnlOthers
-            // 
-            this.flPnlOthers.AutoScroll = true;
-            this.flPnlOthers.Location = new System.Drawing.Point(0, 58);
-            this.flPnlOthers.Name = "flPnlOthers";
-            this.flPnlOthers.Size = new System.Drawing.Size(402, 237);
-            this.flPnlOthers.TabIndex = 34;
             // 
             // btnCancel
             // 
@@ -237,12 +253,28 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.Location = new System.Drawing.Point(709, 10);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(114, 34);
+            this.btnEdit.TabIndex = 36;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // frmAmenities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(833, 640);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pnlTotalPrice);
             this.Controls.Add(this.btnConfirm);
@@ -284,5 +316,7 @@
         private System.Windows.Forms.FlowLayoutPanel flPnlEssential;
         private System.Windows.Forms.FlowLayoutPanel flPnlOthers;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

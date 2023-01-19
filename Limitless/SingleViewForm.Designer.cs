@@ -35,7 +35,6 @@
             this.lblDaysOfStay = new System.Windows.Forms.Label();
             this.lblGuestName = new System.Windows.Forms.Label();
             this.txtGuestNo = new System.Windows.Forms.TextBox();
-            this.txtNights = new System.Windows.Forms.TextBox();
             this.txtGuestName = new System.Windows.Forms.TextBox();
             this.lblRoomName = new System.Windows.Forms.Label();
             this.lblRoomDetails = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.dgvAmenities = new System.Windows.Forms.DataGridView();
             this.lblBedCap = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblNights = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPictureSingle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmenities)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +98,7 @@
             this.lblDaysOfStay.AutoSize = true;
             this.lblDaysOfStay.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDaysOfStay.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDaysOfStay.Location = new System.Drawing.Point(570, 108);
+            this.lblDaysOfStay.Location = new System.Drawing.Point(584, 108);
             this.lblDaysOfStay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDaysOfStay.Name = "lblDaysOfStay";
             this.lblDaysOfStay.Size = new System.Drawing.Size(214, 24);
@@ -124,16 +124,6 @@
             this.txtGuestNo.Name = "txtGuestNo";
             this.txtGuestNo.Size = new System.Drawing.Size(95, 26);
             this.txtGuestNo.TabIndex = 8;
-            // 
-            // txtNights
-            // 
-            this.txtNights.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNights.Location = new System.Drawing.Point(783, 108);
-            this.txtNights.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNights.Name = "txtNights";
-            this.txtNights.Size = new System.Drawing.Size(96, 26);
-            this.txtNights.TabIndex = 9;
-            this.txtNights.TextChanged += new System.EventHandler(this.txtNights_TextChanged);
             // 
             // txtGuestName
             // 
@@ -173,7 +163,7 @@
             this.lblRoomPrice.AutoSize = true;
             this.lblRoomPrice.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRoomPrice.Location = new System.Drawing.Point(621, 74);
+            this.lblRoomPrice.Location = new System.Drawing.Point(589, 76);
             this.lblRoomPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomPrice.Name = "lblRoomPrice";
             this.lblRoomPrice.Size = new System.Drawing.Size(240, 22);
@@ -227,7 +217,7 @@
             this.lblBedCapacity.AutoSize = true;
             this.lblBedCapacity.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBedCapacity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBedCapacity.Location = new System.Drawing.Point(621, 141);
+            this.lblBedCapacity.Location = new System.Drawing.Point(635, 141);
             this.lblBedCapacity.Name = "lblBedCapacity";
             this.lblBedCapacity.Size = new System.Drawing.Size(178, 24);
             this.lblBedCapacity.TabIndex = 23;
@@ -251,7 +241,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSubmit.Location = new System.Drawing.Point(771, 457);
+            this.btnSubmit.Location = new System.Drawing.Point(721, 457);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(108, 41);
             this.btnSubmit.TabIndex = 27;
@@ -292,7 +282,7 @@
             this.btnEditAmenities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditAmenities.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditAmenities.ForeColor = System.Drawing.Color.White;
-            this.btnEditAmenities.Location = new System.Drawing.Point(668, 326);
+            this.btnEditAmenities.Location = new System.Drawing.Point(527, 327);
             this.btnEditAmenities.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditAmenities.Name = "btnEditAmenities";
             this.btnEditAmenities.Size = new System.Drawing.Size(98, 37);
@@ -317,7 +307,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(771, 368);
+            this.label2.Location = new System.Drawing.Point(721, 368);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 24);
             this.label2.TabIndex = 32;
@@ -326,11 +316,11 @@
             // lblTotalPrice
             // 
             this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTotalPrice.Location = new System.Drawing.Point(771, 401);
+            this.lblTotalPrice.Location = new System.Drawing.Point(722, 412);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(58, 24);
+            this.lblTotalPrice.Size = new System.Drawing.Size(40, 17);
             this.lblTotalPrice.TabIndex = 33;
             this.lblTotalPrice.Text = "....";
             // 
@@ -342,7 +332,7 @@
             this.dgvAmenities.Name = "dgvAmenities";
             this.dgvAmenities.RowHeadersWidth = 51;
             this.dgvAmenities.RowTemplate.Height = 24;
-            this.dgvAmenities.Size = new System.Drawing.Size(416, 130);
+            this.dgvAmenities.Size = new System.Drawing.Size(366, 130);
             this.dgvAmenities.TabIndex = 34;
             // 
             // lblBedCap
@@ -350,11 +340,11 @@
             this.lblBedCap.AutoSize = true;
             this.lblBedCap.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBedCap.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBedCap.Location = new System.Drawing.Point(779, 143);
+            this.lblBedCap.Location = new System.Drawing.Point(795, 141);
             this.lblBedCap.Name = "lblBedCap";
-            this.lblBedCap.Size = new System.Drawing.Size(82, 24);
+            this.lblBedCap.Size = new System.Drawing.Size(34, 24);
             this.lblBedCap.TabIndex = 35;
-            this.lblBedCap.Text = "label1";
+            this.lblBedCap.Text = "00";
             // 
             // label3
             // 
@@ -368,12 +358,25 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "ID: ";
             // 
+            // lblNights
+            // 
+            this.lblNights.AutoSize = true;
+            this.lblNights.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNights.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNights.Location = new System.Drawing.Point(795, 110);
+            this.lblNights.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNights.Name = "lblNights";
+            this.lblNights.Size = new System.Drawing.Size(30, 22);
+            this.lblNights.TabIndex = 37;
+            this.lblNights.Text = "00";
+            // 
             // frmSingleViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(18)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(899, 521);
+            this.ClientSize = new System.Drawing.Size(845, 521);
+            this.Controls.Add(this.lblNights);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblBedCap);
             this.Controls.Add(this.dgvAmenities);
@@ -394,7 +397,6 @@
             this.Controls.Add(this.lblRoomDetails);
             this.Controls.Add(this.lblRoomName);
             this.Controls.Add(this.txtGuestName);
-            this.Controls.Add(this.txtNights);
             this.Controls.Add(this.txtGuestNo);
             this.Controls.Add(this.lblGuestName);
             this.Controls.Add(this.lblDaysOfStay);
@@ -418,7 +420,6 @@
         private System.Windows.Forms.Label lblDaysOfStay;
         private System.Windows.Forms.Label lblGuestName;
         private System.Windows.Forms.TextBox txtGuestNo;
-        private System.Windows.Forms.TextBox txtNights;
         private System.Windows.Forms.TextBox txtGuestName;
         private System.Windows.Forms.Label lblRoomName;
         private System.Windows.Forms.Label lblRoomDetails;
@@ -439,5 +440,6 @@
         private System.Windows.Forms.DataGridView dgvAmenities;
         private System.Windows.Forms.Label lblBedCap;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNights;
     }
 }
