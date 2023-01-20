@@ -20,13 +20,16 @@ namespace Limitless.Views
         private RoomPreview _parent;
         private int _roomNumber;
         private string _image;
+        private string path, workingDirectory;
 
         public ModifyRoomForm(frmFrontPage ownerForm, SqlConnection db, int generatedNumber)
         {
             _db = db;
             _ownerForm = ownerForm;
-            _roomNumber = generatedNumber; 
-            
+            _roomNumber = generatedNumber;
+            workingDirectory = Environment.CurrentDirectory;
+            path = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+
             InitializeComponent();
             Console.WriteLine("Image" + ptbRoomImage.Image);
             lblRoomNum.Text = generatedNumber.ToString();
@@ -37,13 +40,15 @@ namespace Limitless.Views
             _db = db;
             _ownerForm = ownerForm;
             _parent= parent;
+            workingDirectory = Environment.CurrentDirectory;
+            path = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
 
             InitializeComponent();
             lblRoomNum.Text = room.RoomNum.ToString();
             txtRoomName.Text = room.RoomName;
             txtPrice.Text = room.Price.ToString();
             txtBedCap.Text = room.BedCapacity.ToString();
-            ptbRoomImage.Image = Image.FromFile(room.Image);
+            ptbRoomImage.Image = Image.FromFile($"{path}\\Limitless\\Graphics\\{room.Image}");
 
         }
 
@@ -118,7 +123,7 @@ namespace Limitless.Views
                 + "','" + cap
                 + "','" + img
                 + "','" + Convert.ToDecimal(txtPrice.Text)
-                + "','"+""+"')";
+                + "','"+"" + "')";
             cmd.ExecuteNonQuery();
             
         }

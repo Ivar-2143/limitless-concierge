@@ -159,6 +159,7 @@ namespace Limitless
             flPnlEssential.Controls.Clear();
             flPnlOthers.Controls.Clear();
             flPnlServices.Controls.Clear();
+            amenities.Clear();
             loadData();
             foreach (Amenity amenity in amenities)
             {

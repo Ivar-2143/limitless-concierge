@@ -19,11 +19,14 @@ namespace Limitless
         private Button _btnView, _btnEdit, _btnDelete;
         private PictureBox _roomImg;
         private SqlConnection _db;
+        private string path, workingDirectory;
         public RoomPreview(Room room, frmFrontPage ownerForm, SqlConnection db)
         {
             _room = room;
             _ownerForm = ownerForm;
             _db= db;
+            workingDirectory = Environment.CurrentDirectory;
+            path = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
 
             Width = 680;
             Height = 138;
@@ -65,7 +68,7 @@ namespace Limitless
 
             //_roomImg.Image = new Bitmap(room.Image);
             Console.WriteLine(room.Image);
-            _roomImg.Image = Image.FromFile(room.Image);
+            _roomImg.Image = Image.FromFile($"{path}\\Limitless\\Graphics\\{room.Image}");
             _roomImg.Location = new Point(5, 4);
             _roomImg.Size = new Size(260, 130);
             _roomImg.SizeMode = PictureBoxSizeMode.StretchImage;

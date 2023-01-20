@@ -77,7 +77,7 @@ namespace Limitless
                     string roomName = reader.GetString(1);
                     int bedCapacity = reader.GetInt32(2);
                     //Console.WriteLine(path);
-                    string image = $"{path}\\Limitless\\Graphics\\{reader.GetString(3)}";
+                    string image = $"{reader.GetString(3)}";
                     double price = Convert.ToDouble(reader.GetDecimal(4));
                     string bookedDates = reader.GetString(5);
                     //Console.WriteLine($"Room No.: {roomNum}\n" +

@@ -66,8 +66,8 @@ namespace Limitless.Views
             SqlCommand cmd = _db.CreateCommand();
             cmd.CommandText = "UPDATE Amenities " +
                 "SET Category = '" + txtCategory.Text +
-                "', Price = '" + Convert.ToDecimal(txtPrice.Text) +
-                "' WHERE Name = " + txtName;
+                "', Price = " + Convert.ToDecimal(txtPrice.Text) +
+                " WHERE Name = '" + txtName.Text + "'";
             cmd.ExecuteNonQuery();
             _db.Close();
         }

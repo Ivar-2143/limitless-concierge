@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace Limitless
         private SqlConnection _db;
         private int _selectedRow;
         private List<Booking> _bookings = new List<Booking>();
+        public string DATE_FORMAT = "MM-dd-yyyy hh:mm tt";
 
         public BookingView(frmFrontPage ownerForm, SqlConnection db)
         {
@@ -45,8 +47,11 @@ namespace Limitless
                     int guests = reader.GetInt32(1);
                     int roomNum = reader.GetInt32(2);
                     int numberOfNights = reader.GetInt32(3);
-                    DateTime dateIn = DateTime.Parse(reader.GetString(4));
-                    DateTime dateOut = DateTime.Parse(reader.GetString(5));
+                    DateTime dateIn;
+                    DateTime.TryParseExact(reader.GetString(4),DATE_FORMAT,new CultureInfo("en"),DateTimeStyles.None,out dateIn);
+                    //DateTime dateIn = DateTime.Parse(reader.GetString(4));
+                    DateTime dateOut;
+                    DateTime.TryParseExact(reader.GetString(5), DATE_FORMAT, new CultureInfo("en"), DateTimeStyles.None, out dateOut);
                     string name = reader.GetString(6);
 
                     _bookings.Add(new Booking(id,guests,roomNum,numberOfNights,dateIn,dateOut,name));

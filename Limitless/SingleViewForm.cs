@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -27,12 +28,15 @@ namespace Limitless
         private List<Booking> _bookings = new List<Booking>();
         private double _TotalAmenityPrice = 0;
         public string DATE_FORMAT = "MM-dd-yyyy hh:mm tt";
+        private string path, workingDirectory;
         public frmSingleViewForm(Room room, frmFrontPage form,SqlConnection db)
         {
             _selectedAmenities = new List<Amenity>();
             _room = room;
             _db = db;
             _prevForm = form;
+            workingDirectory = Environment.CurrentDirectory;
+            path = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
             InitializeComponent();
 
             dtCheckIn.Value = DateTime.Now;
@@ -47,7 +51,7 @@ namespace Limitless
             lblRoomName.Text = room.RoomName;
             lblRoomPrice.Text = $"Price: {Convert.ToString(room.Price)}/per night";
             lblRoomID.Text = $"{room.RoomName}-{room.RoomNum}";
-            ptbPictureSingle.Image = Image.FromFile(room.Image);
+            ptbPictureSingle.Image = Image.FromFile($"{path}\\Limitless\\Graphics\\{room.Image}");
             lblRoomNum.Text = Convert.ToString(room.RoomNum);
         }
         
@@ -122,6 +126,10 @@ namespace Limitless
         {
             foreach (Booking booking in _bookings)
             {
+                Console.WriteLine(dateIn);
+                Console.WriteLine(booking.CheckOut);
+
+                Console.WriteLine(dateIn.Subtract(booking.CheckOut).TotalDays );
                 if (dateIn > booking.CheckIn && dateIn < booking.CheckOut || dateOut > booking.CheckIn && dateOut < booking.CheckOut)
                 {
                     throw new BookingDateException($"There is an existing BOOKING in the Date Range [ {booking.CheckIn} - {booking.CheckOut} ]!");
@@ -130,6 +138,14 @@ namespace Limitless
                 {
                     throw new BookingDateException($"There is an existing BOOKING in the Date Range [ {booking.CheckIn} - {booking.CheckOut} ]!");
                 }
+                //if (dateIn > booking.CheckIn && dateIn < booking.CheckOut || dateOut > booking.CheckIn && dateOut < booking.CheckOut)
+                //{
+                //    throw new BookingDateException($"There is an existing BOOKING in the Date Range [ {booking.CheckIn} - {booking.CheckOut} ]!");
+                //}
+                //if (booking.CheckOut > dateIn && booking.CheckOut < dateOut)
+                //{
+                //    throw new BookingDateException($"There is an existing BOOKING in the Date Range [ {booking.CheckIn} - {booking.CheckOut} ]!");
+                //}
             }
         }
 
@@ -148,16 +164,22 @@ namespace Limitless
                     int guests = reader.GetInt32(1);
                     int roomNum = reader.GetInt32(2);
                     int numberOfNights = reader.GetInt32(3);
-                    DateTime dateIn = DateTime.Parse(reader.GetString(4));
-                    DateTime dateOut = DateTime.Parse(reader.GetString(5));
+                    DateTime dateIn;
+                    DateTime.TryParseExact(reader.GetString(4), DATE_FORMAT, new CultureInfo("en"), DateTimeStyles.None, out dateIn);
+                    //DateTime dateIn = DateTime.Parse(reader.GetString(4));
+                    DateTime dateOut;
+                    DateTime.TryParseExact(reader.GetString(5), DATE_FORMAT, new CultureInfo("en"), DateTimeStyles.None, out dateOut);
+                    //DateTime dateIn = DateTime.Parse(reader.GetString(4));
+
+                    //DateTime dateOut = DateTime.Parse(reader.GetString(5));
                     string name = reader.GetString(6); 
                    
                     Console.WriteLine($"ID: {id}\n" +
                         $"Room Num: {roomNum}\n" +
                         $"Guests: {guests}\n" +
                         $"Nights: {numberOfNights}\n" +
-                        $"Date-in: {dateIn.Month}\n" +
-                        $"Date-out: {dateOut.Day}\n");
+                        $"Date-in: {dateIn}\n" +
+                        $"Date-out: {dateOut}\n");
                     _bookings.Add(new Booking(id,guests,roomNum,numberOfNights,dateIn,dateOut,name));
                 }
             }
@@ -211,8 +233,8 @@ namespace Limitless
                 + "','" + Convert.ToInt32(txtGuestNo.Text)
                 + "','" + _room.RoomNum
                 + "','" + Convert.ToInt32(lblNights.Text)
-                + "','" + _checkIn.ToString("MM-dd-yyyy hh:mm tt")
-                + "','" + _checkOut.ToString()
+                + "','" + _checkIn.ToString(DATE_FORMAT)
+                + "','" + _checkOut.ToString(DATE_FORMAT)
                 + "','" + txtGuestName.Text
                 + "','" + listOfAmenities + "')";
             cmd.ExecuteNonQuery();
