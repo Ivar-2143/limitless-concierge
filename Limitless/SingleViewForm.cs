@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using Limitless.Classes;
 using Limitless.Components;
 
@@ -239,6 +241,23 @@ namespace Limitless
                 + "','" + listOfAmenities + "')";
             cmd.ExecuteNonQuery();
             _db.Close();
+
+            Document document = new Document(iTextSharp.text.PageSize.LETTER, 10,10,42,35);
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream($"LIMITLESS-{id}.pdf", FileMode.Create));
+            document.Open();
+            Paragraph p = new Paragraph(
+                $"BOOKING ID: {id}\n" +
+                $"GUEST : {txtGuestName.Text}\n" +
+                $"GUEST QUANTITY : {txtGuestNo.Text}\n" +
+                $"PREFERRED ROOM : {_room.RoomNum}\n" +
+                $"NUMBER OF NIGHTS : {lblNights.Text}\n" +
+                $"CHECK-IN TIME : {_checkIn.ToString(DATE_FORMAT)}\n" +
+                $"CHECK-OUT TIME : {_checkOut.ToString(DATE_FORMAT)}\n" +
+                $"AMENITIES : {listOfAmenities}\n"
+                );
+            document.Add( p );
+            document.Close();
+
         }
 
         public void setTotalAmenityPrice(double price)
