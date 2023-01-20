@@ -79,3 +79,7 @@ C:\Users\Adrian\Documents\Visual Studio 2022\projects\Limitless\Limitless\obj\De
 C:\Users\Adrian\Documents\Visual Studio 2022\projects\Limitless\Limitless\obj\Debug\Limitless.csproj.CoreCompileInputs.cache
 C:\Users\Adrian\Documents\Visual Studio 2022\projects\Limitless\Limitless\obj\Debug\Limitless.exe
 C:\Users\Adrian\Documents\Visual Studio 2022\projects\Limitless\Limitless\obj\Debug\Limitless.pdb
+C:\Users\Adrian\Documents\Visual Studio 2022\projects\Limitless\Limitless\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Adrian\Documents\Visual Studio 2022\projects\Limitless\Limitless\bin\Debug\itextsharp.dll
+C:\Users\Adrian\Documents\Visual Studio 2022\projects\Limitless\Limitless\bin\Debug\itextsharp.xml
+C:\Users\Adrian\Documents\Visual Studio 2022\projects\Limitless\Limitless\obj\Debug\Limitless.csproj.CopyComplete

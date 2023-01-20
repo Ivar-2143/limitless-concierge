@@ -68,7 +68,7 @@ namespace Limitless
 
             //_roomImg.Image = new Bitmap(room.Image);
             Console.WriteLine(room.Image);
-            _roomImg.Image = Image.FromFile($"{path}\\Limitless\\Graphics\\{room.Image}");
+            _roomImg.Image = System.Drawing.Image.FromFile($"{path}\\Limitless\\Graphics\\{room.Image}");
             _roomImg.Location = new Point(5, 4);
             _roomImg.Size = new Size(260, 130);
             _roomImg.SizeMode = PictureBoxSizeMode.StretchImage;

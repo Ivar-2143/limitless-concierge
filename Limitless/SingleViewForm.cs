@@ -53,7 +53,7 @@ namespace Limitless
             lblRoomName.Text = room.RoomName;
             lblRoomPrice.Text = $"Price: {Convert.ToString(room.Price)}/per night";
             lblRoomID.Text = $"{room.RoomName}-{room.RoomNum}";
-            ptbPictureSingle.Image = Image.FromFile($"{path}\\Limitless\\Graphics\\{room.Image}");
+            ptbPictureSingle.Image = System.Drawing.Image.FromFile($"{path}\\Limitless\\Graphics\\{room.Image}");
             lblRoomNum.Text = Convert.ToString(room.RoomNum);
         }
         

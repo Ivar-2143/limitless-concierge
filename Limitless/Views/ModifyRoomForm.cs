@@ -48,7 +48,7 @@ namespace Limitless.Views
             txtRoomName.Text = room.RoomName;
             txtPrice.Text = room.Price.ToString();
             txtBedCap.Text = room.BedCapacity.ToString();
-            ptbRoomImage.Image = Image.FromFile($"{path}\\Limitless\\Graphics\\{room.Image}");
+            ptbRoomImage.Image = System.Drawing.Image.FromFile($"{path}\\Limitless\\Graphics\\{room.Image}");
 
         }
 
