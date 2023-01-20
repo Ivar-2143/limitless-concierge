@@ -45,10 +45,13 @@ namespace Limitless
                     int guests = reader.GetInt32(1);
                     int roomNum = reader.GetInt32(2);
                     int numberOfNights = reader.GetInt32(3);
-                    DateTime dateIn = DateTime.Parse(reader.GetString(4));
-                    DateTime dateOut = DateTime.Parse(reader.GetString(5));
+                    Console.WriteLine(reader.GetString(4));
+                    DateTime dateIn = DateTime.Now;
+                    DateTime dateOut = DateTime.Now;
+                    //teTime dateIn = DateTime.Parse(reader.GetString(4));
+                   //ateTime dateOut = DateTime.Parse(reader.GetString(5));
                     string name = reader.GetString(6);
-
+                    string amenities = reader.GetString(7);
                     _bookings.Add(new Booking(id,guests,roomNum,numberOfNights,dateIn,dateOut,name));
                 }
             }

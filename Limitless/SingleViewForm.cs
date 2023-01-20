@@ -211,8 +211,8 @@ namespace Limitless
                 + "','" + Convert.ToInt32(txtGuestNo.Text)
                 + "','" + _room.RoomNum
                 + "','" + Convert.ToInt32(lblNights.Text)
-                + "','" + _checkIn.ToString("MM-dd-yyyy hh:mm tt")
-                + "','" + _checkOut.ToString()
+                + "','" + _checkIn.ToString(DATE_FORMAT)
+                + "','" + _checkOut.ToString(DATE_FORMAT)
                 + "','" + txtGuestName.Text
                 + "','" + listOfAmenities + "')";
             cmd.ExecuteNonQuery();
