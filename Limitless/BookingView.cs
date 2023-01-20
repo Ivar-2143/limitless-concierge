@@ -53,8 +53,9 @@ namespace Limitless
                     DateTime dateOut;
                     DateTime.TryParseExact(reader.GetString(5), DATE_FORMAT, new CultureInfo("en"), DateTimeStyles.None, out dateOut);
                     string name = reader.GetString(6);
+                    string amenities = reader.GetString(7);
 
-                    _bookings.Add(new Booking(id,guests,roomNum,numberOfNights,dateIn,dateOut,name));
+                    _bookings.Add(new Booking(id,guests,roomNum,numberOfNights,dateIn,dateOut,name,amenities));
                 }
             }
 
@@ -99,6 +100,7 @@ namespace Limitless
                     _selectedBooking.CheckIn = booking.CheckIn;
                     _selectedBooking.CheckOut = booking.CheckOut;
                     _selectedBooking.GuestName =booking.GuestName;
+                    _selectedBooking.Amenities = booking.Amenities;
                 }
             }
             if (_selectedBooking != null)

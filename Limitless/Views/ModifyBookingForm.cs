@@ -22,6 +22,7 @@ namespace Limitless.Views
         private DateTime _checkIn, _checkOut;
         public string DATE_FORMAT = "MM-dd-yyyy hh:mm tt";
         private BookingView _parentView;
+        private List<Amenity> _amenities;
 
         public ModifyBookingForm(BookingView parentView,SqlConnection db,Booking details, List<Booking> bookings)
         {
@@ -29,8 +30,9 @@ namespace Limitless.Views
             _bookings = bookings;
             _details= details;
             _parentView= parentView;
+            _amenities = new List<Amenity>();
             InitializeComponent();
-
+            fetchAmenities();
             lblBookingID.Text = details.ID;
             lblName.Text = details.GuestName;
             lblRoomNum.Text = details.Room.ToString();
@@ -43,14 +45,34 @@ namespace Limitless.Views
             dtCheckOut.Format = DateTimePickerFormat.Custom;
             dtCheckOut.CustomFormat = DATE_FORMAT;
         }
-        private void LoadData()
+        private void LoadData(string[] names)
         {
             _db.Open();
             SqlCommand cmd = _db.CreateCommand();
-            cmd.CommandText = "SELECT * FROM Bookings";
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-
+            cmd.CommandText = "SELECT * FROM Amenities";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    bool isChecked = false;
+                    foreach(string name in names)
+                    {
+                        if (name == reader.GetString(0))
+                        {
+                            isChecked = true;
+                        }
+                    }
+                    if (isChecked)
+                    {
+                        _amenities.Add(new Amenity(reader.GetString(0), Convert.ToDouble(reader.GetDecimal(1)), reader.GetString(2)));
+                    }
+                }
+            }
+            
             _db.Close();
+            dtgAmenities.DataSource = _amenities.ToList();
+            
         }
         private void EvaluateDate(DateTime dateIn, DateTime dateOut)
         {
@@ -111,6 +133,15 @@ namespace Limitless.Views
 
         private void UpdateData()
         {
+            string listOfAmenities = "";
+            if (_amenities.Count > 0)
+            {
+                foreach (Amenity amenity in _amenities)
+                {
+                    listOfAmenities = listOfAmenities + amenity.Name + ",";
+                }
+            }
+
             _db.Open();
             SqlCommand cmd = _db.CreateCommand();
             cmd.CommandText = "UPDATE Bookings " +
@@ -119,6 +150,7 @@ namespace Limitless.Views
                 "', NumberOfNights = '" + Convert.ToInt32(lblNights.Text) +
                 "', CheckIn = '" + dtCheckIn.Value.ToString(DATE_FORMAT) +
                 "', CheckOut = '" + dtCheckOut.Value.ToString(DATE_FORMAT) +
+                "', ListOfAmenities = '" + listOfAmenities +
                 "' WHERE Id = '" + _details.ID + "'";
             cmd.ExecuteNonQuery();
             _db.Close();
@@ -144,5 +176,22 @@ namespace Limitless.Views
             lblNights.Text = Convert.ToString(Convert.ToInt32(dtCheckOut.Value.Subtract(dtCheckIn.Value).TotalDays));
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            frmAmenities  _amenitiesForm = new frmAmenities(this, _amenities);
+            _amenitiesForm.ShowDialog();
+        }
+
+        private void fetchAmenities()
+        {
+            string[] listOfAmenities = _details.Amenities.Split(',');
+            LoadData(listOfAmenities);
+            Console.WriteLine(listOfAmenities.Length);
+        }
+
+        public void loadGridView(List<Amenity> amenities)
+        {
+            dtgAmenities.DataSource = amenities.ToList();
+        }
     }
 }

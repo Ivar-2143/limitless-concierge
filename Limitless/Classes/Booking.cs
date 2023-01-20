@@ -15,6 +15,7 @@ namespace Limitless.Classes
         public DateTime CheckIn { get; set; }
         public DateTime CheckOut { get; set; }
         public string GuestName { get; set; }
+        public string Amenities { get; set; }
         public Booking() { }
 
         public Booking(string iD, int guests, int room, int numberOfNights, DateTime checkIn, DateTime checkOut, string guestName)
@@ -26,6 +27,17 @@ namespace Limitless.Classes
             CheckIn = checkIn;
             CheckOut = checkOut;
             GuestName = guestName;
+        }
+        public Booking(string iD, int guests, int room, int numberOfNights, DateTime checkIn, DateTime checkOut, string guestName, string amenities)
+        {
+            ID = iD;
+            Guests = guests;
+            Room = room;
+            NumberOfNights = numberOfNights;
+            CheckIn = checkIn;
+            CheckOut = checkOut;
+            GuestName = guestName;
+            Amenities= amenities;
         }
     }
 }

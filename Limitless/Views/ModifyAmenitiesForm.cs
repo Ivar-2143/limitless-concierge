@@ -85,7 +85,7 @@ namespace Limitless.Views
                 _db.Close();
             }
         }
-
+        
         private void dtgAmenities_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _selectedRow = e.RowIndex;

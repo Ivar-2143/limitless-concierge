@@ -27,6 +27,7 @@ namespace Limitless
         public List<Amenity> chosenAmenities;
         private frmSingleViewForm _parent;
         private double _price;
+        private ModifyBookingForm bookingForm;
 
         public frmAmenities(frmSingleViewForm parentView)
         {
@@ -98,6 +99,49 @@ namespace Limitless
                 }
             }
         }
+        public frmAmenities(ModifyBookingForm parentView, List<Amenity> selected)
+        {
+            chosenAmenities = selected;
+            Console.WriteLine(chosenAmenities.Count);
+            bookingForm = parentView;
+
+            workingDirectory = Environment.CurrentDirectory;
+            path = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            connection = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={path}\\Limitless\\dbLimitless.mdf;Integrated Security=True";
+            db = new SqlConnection(connection);
+
+            loadData();
+            InitializeComponent();
+
+            setPrice();
+            foreach (Amenity amenity in amenities)
+            {
+                bool isChecked = false;
+                if (chosenAmenities.Count > 0)
+                {
+                    foreach (Amenity cAmenity in chosenAmenities)
+                    {
+                        if (cAmenity.Name == amenity.Name)
+                        {
+                            isChecked = true;
+                        }
+                    }
+                }
+                if (amenity.Category == "services")
+                {
+                    flPnlServices.Controls.Add(new AmenityComponent(this, amenity, isChecked));
+                }
+                else if (amenity.Category == "essentials")
+                {
+                    flPnlEssential.Controls.Add(new AmenityComponent(this, amenity, isChecked));
+                }
+                else
+                {
+                    flPnlOthers.Controls.Add(new AmenityComponent(this, amenity, isChecked));
+                }
+            }
+        }
+
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -131,10 +175,21 @@ namespace Limitless
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (chosenAmenities.Count > 0)
+            if(_parent != null)
             {
-                _parent.loadGridView(chosenAmenities);
-                _parent.setTotalAmenityPrice(_price);
+                if (chosenAmenities.Count > 0)
+                {
+                    _parent.loadGridView(chosenAmenities);
+                    _parent.setTotalAmenityPrice(_price);
+                }
+            }
+            if (bookingForm != null)
+            {
+                if (chosenAmenities.Count > 0)
+                {
+                    bookingForm.loadGridView(chosenAmenities);
+                    //_parent.setTotalAmenityPrice(_price);
+                }
             }
             Close();
             
@@ -146,6 +201,12 @@ namespace Limitless
         {
             Close();
         }
+
+        private void frmAmenities_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public void setPrice()
         {
             _price = 0;
